@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="atl" nsURI="http://www.example.org/atl" nsPrefix="atl">
+  <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+    <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="Model">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subject" lowerBound="1"
+        eType="#//Subject" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Subject">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="userFeedbackOfDifferentTypes"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="userFeedbackOfDifferentTypes" value="self.userfeedback->isUnique(oclType().name)"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="userfeedback" lowerBound="1"
+        upperBound="2" eType="#//UserFeedback" containment="true" eOpposite="#//UserFeedback/subject"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="feature" upperBound="-1"
+        eType="#//Feature" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="featureCount" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigInteger"
+        changeable="false" volatile="true" transient="true" derived="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+        <details key="derivation" value="self.feature->size()"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Feature">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="nameValidation nameMustBeUnique"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="nameValidation" value="not self.name.oclIsUndefined() and self.name.size() > 3 and self.name.substring(1,1).toUpper().compareTo(self.name.substring(1,1))=0"/>
+      <details key="nameMustBeUnique" value="Feature.allInstances()->isUnique(e | e.name)"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UserFeedback" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subject" eType="#//Subject"
+        eOpposite="#//Subject/userfeedback"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="GradeType">
+    <eLiterals name="CUSTOM"/>
+    <eLiterals name="STARS" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ReviewType">
+    <eLiterals name="ONLYGRADE"/>
+    <eLiterals name="ANNOTATED" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Review" eSuperTypes="#//UserFeedback">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="gradeType" eType="#//GradeType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//ReviewType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="CommentType">
+    <eLiterals name="SIMPLE"/>
+    <eLiterals name="RICHTEXT" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Comment" eSuperTypes="#//UserFeedback">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="reply" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="moderation" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="commentType" eType="#//CommentType"
+        defaultValueLiteral="SIMPLE"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="moderationprocess" eType="#//ModerationProcess"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="hasModerationProcess" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" changeable="false"
+        volatile="true" transient="true" defaultValueLiteral="false" derived="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+        <details key="derivation" value="not self.moderationprocess->isEmpty()"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModerationProcess">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="canDelete" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="step" upperBound="-1" eType="#//Step"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="startStop" lowerBound="1"
+        eType="#//ValidationStep"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Step" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="End" eSuperTypes="#//Step"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ValidationStep" abstract="true" eSuperTypes="#//Step">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nextApprove" lowerBound="1"
+        eType="#//Step"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nextReject" lowerBound="1"
+        eType="#//Step"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Automatic" eSuperTypes="#//ValidationStep">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="method" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Manual" eSuperTypes="#//ValidationStep"/>
+</ecore:EPackage>

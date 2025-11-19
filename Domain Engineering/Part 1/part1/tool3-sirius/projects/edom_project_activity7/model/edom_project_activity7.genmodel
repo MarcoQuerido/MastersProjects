@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/edom_project_activity7/src-gen" creationIcons="false"
+    editDirectory="/edom_project_activity7.edit/src-gen" editorDirectory="/edom_project_activity7.editor/src-gen"
+    modelPluginID="edom_project_activity7" modelName="Edom_project_activity7" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>edom_project_activity7.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Edom_project_activity7" disposableProviderFactory="true" ecorePackage="edom_project_activity7.ecore#/">
+    <genClasses ecoreClass="edom_project_activity7.ecore#//Model">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference edom_project_activity7.ecore#//Model/project"/>
+    </genClasses>
+    <genClasses ecoreClass="edom_project_activity7.ecore#//Project">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference edom_project_activity7.ecore#//Project/script"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference edom_project_activity7.ecore#//Project/setting"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference edom_project_activity7.ecore#//Project/build"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference edom_project_activity7.ecore#//Project/rule"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference edom_project_activity7.ecore#//Project/task"/>
+    </genClasses>
+    <genClasses ecoreClass="edom_project_activity7.ecore#//Script"/>
+    <genClasses ecoreClass="edom_project_activity7.ecore#//Setting"/>
+    <genClasses ecoreClass="edom_project_activity7.ecore#//Rule">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference edom_project_activity7.ecore#//Rule/command"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference edom_project_activity7.ecore#//Rule/file"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference edom_project_activity7.ecore#//Rule/property"/>
+    </genClasses>
+    <genClasses ecoreClass="edom_project_activity7.ecore#//Build"/>
+    <genClasses ecoreClass="edom_project_activity7.ecore#//Task">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute edom_project_activity7.ecore#//Task/id"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference edom_project_activity7.ecore#//Task/action"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference edom_project_activity7.ecore#//Task/task"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference edom_project_activity7.ecore#//Task/parameters"/>
+    </genClasses>
+    <genClasses ecoreClass="edom_project_activity7.ecore#//Command">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference edom_project_activity7.ecore#//Command/prefix"/>
+    </genClasses>
+    <genClasses ecoreClass="edom_project_activity7.ecore#//Prefix"/>
+    <genClasses ecoreClass="edom_project_activity7.ecore#//File">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute edom_project_activity7.ecore#//File/filetype"/>
+    </genClasses>
+    <genClasses ecoreClass="edom_project_activity7.ecore#//Property">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference edom_project_activity7.ecore#//Property/parameters"/>
+    </genClasses>
+    <genClasses ecoreClass="edom_project_activity7.ecore#//Parameters"/>
+    <genClasses ecoreClass="edom_project_activity7.ecore#//Action"/>
+  </genPackages>
+</genmodel:GenModel>

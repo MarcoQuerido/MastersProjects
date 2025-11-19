@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<edom_project_activity7:Model
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:edom_project_activity7="http://www.example.org/edom_project_activity7"
+    xsi:schemaLocation="http://www.example.org/edom_project_activity7 edom_project_activity7.ecore">
+  <project>
+    <script/>
+    <build/>
+    <rule>
+      <command>
+        <prefix/>
+      </command>
+      <file
+          filetype="Delete"/>
+    </rule>
+    <task>
+      <action/>
+    </task>
+  </project>
+</edom_project_activity7:Model>

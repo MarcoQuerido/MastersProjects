@@ -1,0 +1,120 @@
+@startuml
+
+class C_Model << (S,#FF7700) >> {
+}
+
+class CProject << (S,#696969) >> {
+}
+
+class Setting1 << (S,#FFD700) >> {
+}
+
+CProject *-> Setting1
+
+class Build1 << (S,#00BFFF) >> {
+}
+
+CProject *-> Build1
+
+class Build << (S,#FF6347) >> {
+}
+
+class BuildCommand << (S,#ADD8E6) >> {
+}
+
+class SC1 << (S,#F0E68C) >> {
+}
+
+BuildCommand *-> SC1
+
+class Prefix1 << (S,#FFDEAD) >> {
+}
+
+BuildCommand *-> Prefix1
+
+Build *-> BuildCommand
+
+class Property << (S,#FF69B4) >> {
+}
+
+class MakeBuild << (S,#808000) >> {
+}
+
+Property *-> MakeBuild
+
+Build *-> Property
+
+class LibFile << (S,#00FF00) >> {
+}
+
+class Function1 << (S,#32CD32) >> {
+}
+
+LibFile *-> Function1
+
+Build *-> LibFile
+
+class Cfile1 << (S,#00FF00) >> {
+}
+
+class Main << (S,#32CD32) >> {
+}
+
+Cfile1 *-> Main
+
+class CHeaderfile1 << (S,#00FF00) >> {
+}
+
+class Main << (S,#32CD32) >> {
+}
+
+CHeaderfile1 *-> Main
+
+Cfile1 *-> CHeaderfile1
+
+Build *-> Cfile1
+
+class Cfile2 << (S,#00FF00) >> {
+}
+
+class Gets << (S,#32CD32) >> {
+}
+
+Cfile2 *-> Gets
+
+class CHeaderfile1 << (S,#00FF00) >> {
+}
+
+class Gets << (S,#32CD32) >> {
+}
+
+CHeaderfile1 *-> Gets
+
+Cfile2 *-> CHeaderfile1
+
+Build *-> Cfile2
+
+class CHeaderfile1 << (S,#00FF00) >> {
+}
+
+class Main << (S,#32CD32) >> {
+}
+
+CHeaderfile1 *-> Main
+
+Build *-> CHeaderfile1
+
+class CHeaderfile2 << (S,#00FF00) >> {
+}
+
+class Gets << (S,#32CD32) >> {
+}
+
+CHeaderfile2 *-> Gets
+
+Build *-> CHeaderfile2
+
+CProject *-> Build
+
+C_Model *-> CProject
+@enduml

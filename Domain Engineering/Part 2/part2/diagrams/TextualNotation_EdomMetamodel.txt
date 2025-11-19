@@ -1,0 +1,137 @@
+Model:
+    Model
+    {
+        name = "YABL",
+        project = Project {
+            attributes = Tasks:
+                                Task {
+                                    name = name,
+                                    description = description,
+                                    group = group,
+                                    enabled = enabled,
+                                    action = Actions:
+                                                Action {
+                                                    name = name,
+                                                    description = description,
+                                                    type = type
+                                                },
+                                    attributes = Parameters:
+                                                    Parameters {
+                                                        name = name,
+                                                        value = value
+                                                    },
+                                    task = Task,
+                                    script = Scripts:
+                                                Script {
+                                                    name = name
+                                                } 
+                                },
+            name = name,
+            version = version,
+            properties = Properties:
+                            Property{
+                                name = name,
+                                attributes = Parameters:
+                                                Parameters {
+                                                  name = name,
+                                                  value = value
+                                                }
+                            }
+            parameters = Parameters:
+                            Parameters {
+                                name = name,
+                                value = value
+                            },
+            description = Description {
+                                name = name,
+                                attributes = Parameters:
+                                                Parameters {
+                                                    name = name,
+                                                    value = value
+                                                }
+                            },
+            build = Build {
+                        group = group,
+                        name = name ,
+                        version = version,
+                        plugin = Plugins:
+                                    Plugin {
+                                        id = id,
+                                        name = name,
+                                        type = type
+                                    },
+                        repository = Repositories:
+                                        Repository {
+                                            name = name
+                                        },
+                        dependency = Dependencies:
+                                        Dependency {
+                                            group = group,
+                                            version = version,
+                                            name = name
+                                        },
+                        method = Methods:
+                                    Method {
+                                        property = property,
+                                        name = name
+                                    },
+                      },
+            targets = Files:
+                            File {
+                                filename = filename,
+                                functions = Functions:
+                                                Function {
+                                                    variables = variables,
+                                                    name = name
+                                                },
+                                target = File,
+                                prerequisite = File,
+                                tasks = Task,
+                                attributes = Parameters:
+                                                Parameters {
+                                                    name = name,
+                                                    value = value
+                                                }
+                            }
+        },
+        rules = Rules:
+                    Rule {
+                        attributes = Properties:
+                                        Property{
+                                            name = name,
+                                            attributes = Parameters {
+                                                            name = name,
+                                                            value = value
+                                                           }
+                                        },
+                        dependencies = Files:
+                                            File {
+                                                filename = filename,
+                                                functions = Function,
+                                                target = File,
+                                                prerequisite = File,
+                                                tasks = Task,
+                                                attributes = Parameters
+                                            },
+                        target = Files:
+                                    File {
+                                        filename = filename,
+                                        functions = Function,
+                                        target = File,
+                                        prerequisite = File,
+                                        tasks = Task,
+                                        attributes = Parameters
+                                    },
+                        commands = Commands:
+                                        Command {
+                                            commandline = commandline,
+                                            modified = Prefixes:
+                                                            Prefix {
+                                                                name = name
+                                                            },
+                                            name = name
+                                        },
+                        type = type,
+                        name = name 
+                    }
+    };

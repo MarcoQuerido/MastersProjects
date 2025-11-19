@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<test_project:Model
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:test_project="http://www.example.org/test_project"
+    xsi:schemaLocation="http://www.example.org/test_project test_project.ecore">
+  <project name="Projeto"
+      version="2">
+    <script
+        name="script"/>
+    <setting
+        desc="fafasf"
+        name="script"/>
+  </project>
+</test_project:Model>

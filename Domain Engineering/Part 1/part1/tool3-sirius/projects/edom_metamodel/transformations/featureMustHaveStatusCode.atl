@@ -1,0 +1,19 @@
+-- @atlcompiler emftvm
+-- @path MM=/edom_metamodel/model/test_project.ecore
+-- @path MM1=/edom_metamodel/model/test_project.ecore
+
+module featureMustHaveStatusCode;
+create OUT : MM1 from IN : MM;
+
+rule FeatureName2UpperCase {
+	from
+		t1 : YABL!Command
+	to
+		t2 : YABL2!Command (
+			commandLine <- t1.name.substring(1, 1).toUpper() + t1.name.substring(2, t1.name.size())
+	)
+	do {
+		-- debug can be used to print to the console
+		(’Applied FeatureName2UpperCase for Project ’+t1.name).debug();
+	}
+}

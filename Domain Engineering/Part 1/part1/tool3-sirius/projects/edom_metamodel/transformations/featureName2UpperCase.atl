@@ -1,0 +1,19 @@
+-- @atlcompiler emftvm
+-- @path YABL2=/edom_metamodel/model/test_project.ecore
+-- @path YABL=/edom_metamodel/model/test_project.ecore
+
+module featureName2UpperCase;
+create OUT : YABL2 from IN : YABL;
+
+rule FeatureName2UpperCase {
+	from
+		t1 : YABL!Project (t1.name.substring(1, 1).toUpper().compareTo(t1.name.substring(1, 1))<>0)
+	to
+		t2 : YABL2!Project (
+			name <- t1.name.substring(1, 1).toUpper() + t1.name.substring(2, t1.name.size())
+	)
+	do {
+		-- debug can be used to print to the console
+		(’Applied FeatureName2UpperCase for Project ’+t1.name).debug();
+	}
+}

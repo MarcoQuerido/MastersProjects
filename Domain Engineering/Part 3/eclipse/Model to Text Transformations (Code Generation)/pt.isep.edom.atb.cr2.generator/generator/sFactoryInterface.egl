@@ -1,0 +1,9 @@
+package pt.isep.edom.atb.[%=theModel.name.firstToLowerCase()%];
+
+import pt.isep.edom.atb.[%=theModel.name.firstToLowerCase()%].domain.Comment;
+import pt.isep.edom.atb.[%=theModel.name.firstToLowerCase()%].domain.ValidationCommentProcess;
+
+public interface SFactory {
+
+	ValidationCommentProcess getValidationProcess(Comment c);
+}

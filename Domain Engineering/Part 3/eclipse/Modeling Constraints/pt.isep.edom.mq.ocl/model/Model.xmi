@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assignment2:Model
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:assignment2="http://www.example.org/assignment2"
+    xsi:schemaLocation="http://www.example.org/assignment2 assignment2.ecore">
+  <subject name="Product">
+    <userfeedback
+        xsi:type="assignment2:Review"
+        name="Review2"/>
+    <userfeedback
+        xsi:type="assignment2:Comment"
+        name="Comment"/>
+    <feature
+        name="Price"/>
+    <feature
+        name="Price2"/>
+    <feature
+        name="NameWupperCase"/>
+  </subject>
+</assignment2:Model>

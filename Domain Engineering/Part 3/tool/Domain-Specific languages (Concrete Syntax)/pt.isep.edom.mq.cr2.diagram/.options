@@ -1,0 +1,7 @@
+# Tracing options for the pt.isep.edom.mq.cr2.diagram plug-in
+
+# Common issues
+pt.isep.edom.mq.cr2.diagram/debug=false
+
+# Visual IDs
+pt.isep.edom.mq.cr2.diagram/debug/visualID=false

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ocl:Model xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ocl="http://www.example.org/ocl"
+    xsi:schemaLocation="http://www.example.org/ocl ocl.ecore">
+  <subject name="Product">
+    <feature
+        name="Price"/>
+    <feature
+        name="Price2"/>
+    <feature
+        name="NameWupperCase"/>
+    <userfeedback
+        xsi:type="ocl:Review"
+        name="Review2"/>
+    <userfeedback
+        xsi:type="ocl:Comment"
+        name="Comment"/>
+  </subject>
+</ocl:Model>

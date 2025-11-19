@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/pt.isep.edom.mq.yabl/src-gen" creationIcons="false"
+    editDirectory="/pt.isep.edom.mq.yabl.edit/src-gen" editorDirectory="/pt.isep.edom.mq.yabl.editor/src-gen"
+    modelPluginID="pt.isep.edom.mq.yabl" modelName="Yabl" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>yabl.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Yabl" basePackage="pt.isep.edom.mq" disposableProviderFactory="true"
+      ecorePackage="yabl.ecore#/">
+    <genClasses ecoreClass="yabl.ecore#//Model">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute yabl.ecore#//Model/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference yabl.ecore#//Model/project"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference yabl.ecore#//Model/rule"/>
+    </genClasses>
+    <genClasses ecoreClass="yabl.ecore#//Parameters">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute yabl.ecore#//Parameters/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute yabl.ecore#//Parameters/value"/>
+    </genClasses>
+    <genClasses ecoreClass="yabl.ecore#//Property">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute yabl.ecore#//Property/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference yabl.ecore#//Property/parameters"/>
+    </genClasses>
+    <genClasses ecoreClass="yabl.ecore#//Project">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute yabl.ecore#//Project/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute yabl.ecore#//Project/version"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference yabl.ecore#//Project/task"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference yabl.ecore#//Project/parameters"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference yabl.ecore#//Project/property"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference yabl.ecore#//Project/build"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference yabl.ecore#//Project/target"/>
+    </genClasses>
+    <genClasses ecoreClass="yabl.ecore#//Build">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute yabl.ecore#//Build/group"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute yabl.ecore#//Build/version"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute yabl.ecore#//Build/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference yabl.ecore#//Build/plugin"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference yabl.ecore#//Build/repository"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference yabl.ecore#//Build/dependency"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference yabl.ecore#//Build/method"/>
+    </genClasses>
+    <genClasses ecoreClass="yabl.ecore#//Plugin">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute yabl.ecore#//Plugin/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute yabl.ecore#//Plugin/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute yabl.ecore#//Plugin/type"/>
+    </genClasses>
+    <genClasses ecoreClass="yabl.ecore#//Method">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute yabl.ecore#//Method/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute yabl.ecore#//Method/property"/>
+    </genClasses>
+    <genClasses ecoreClass="yabl.ecore#//Repository">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute yabl.ecore#//Repository/name"/>
+    </genClasses>
+    <genClasses ecoreClass="yabl.ecore#//Dependency">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute yabl.ecore#//Dependency/group"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute yabl.ecore#//Dependency/version"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute yabl.ecore#//Dependency/name"/>
+    </genClasses>
+    <genClasses ecoreClass="yabl.ecore#//Task">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute yabl.ecore#//Task/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute yabl.ecore#//Task/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute yabl.ecore#//Task/group"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute yabl.ecore#//Task/enabled"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference yabl.ecore#//Task/action"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference yabl.ecore#//Task/script"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference yabl.ecore#//Task/task"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference yabl.ecore#//Task/attributes"/>
+    </genClasses>
+    <genClasses ecoreClass="yabl.ecore#//Action">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute yabl.ecore#//Action/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute yabl.ecore#//Action/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute yabl.ecore#//Action/type"/>
+    </genClasses>
+    <genClasses ecoreClass="yabl.ecore#//Script">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute yabl.ecore#//Script/name"/>
+    </genClasses>
+    <genClasses ecoreClass="yabl.ecore#//File">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute yabl.ecore#//File/filename"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference yabl.ecore#//File/attributes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference yabl.ecore#//File/functions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference yabl.ecore#//File/task"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference yabl.ecore#//File/prerequisites"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference yabl.ecore#//File/target"/>
+    </genClasses>
+    <genClasses ecoreClass="yabl.ecore#//Function">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute yabl.ecore#//Function/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute yabl.ecore#//Function/variables"/>
+    </genClasses>
+    <genClasses ecoreClass="yabl.ecore#//Rule">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute yabl.ecore#//Rule/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute yabl.ecore#//Rule/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference yabl.ecore#//Rule/attributes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference yabl.ecore#//Rule/commands"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference yabl.ecore#//Rule/depencencies"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference yabl.ecore#//Rule/target"/>
+    </genClasses>
+    <genClasses ecoreClass="yabl.ecore#//Command">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute yabl.ecore#//Command/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute yabl.ecore#//Command/commandline"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference yabl.ecore#//Command/modified"/>
+    </genClasses>
+    <genClasses ecoreClass="yabl.ecore#//Prefix">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute yabl.ecore#//Prefix/name"/>
+      <genOperations ecoreOperation="yabl.ecore#//Prefix/newOperation1"/>
+      <genOperations ecoreOperation="yabl.ecore#//Prefix/newOperation2"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

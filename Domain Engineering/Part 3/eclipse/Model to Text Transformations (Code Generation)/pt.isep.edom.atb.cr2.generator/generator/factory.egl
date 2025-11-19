@@ -1,0 +1,31 @@
+package pt.isep.edom.atb.publico.domain;
+
+public class Factory {
+
+	public static [%=theArticle.name.firstToUpperCase()%] new[%=theArticle.name.firstToUpperCase()%](
+	[% for (feature in theArticle.all) { %]
+	[%=feature.name%]
+	[% } %]
+	) {
+		[%=theArticle.name.firstToUpperCase()%] a=new [%=theArticle.name.firstToUpperCase()%](
+	[% for (feature in theArticle.all) { %]
+	[%=feature.name%]
+	[% } %]
+	);
+		return a;
+	}
+
+	public static [%=theComment.name.firstToUpperCase()%] new[%=theComment.name.firstToUpperCase()%](
+	[% for (feature in theComment.all) { %]
+	[%=feature.name%]
+	[% } %]
+	) {
+		[%=theComment.name.firstToUpperCase()%] c=new [%=theComment.name.firstToUpperCase()%](
+	[% for (feature in theArticle.all) { %]
+	[%=feature.name%]
+	[% } %]
+	);
+		return c;
+	}
+	
+}

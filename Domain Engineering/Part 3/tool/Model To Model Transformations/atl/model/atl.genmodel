@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/atl/src-gen" creationIcons="false" editDirectory="/atl.edit/src-gen"
+    editorDirectory="/atl.editor/src-gen" modelPluginID="atl" modelName="Atl" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>atl.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Atl" disposableProviderFactory="true" ecorePackage="atl.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="atl.ecore#//GradeType">
+      <genEnumLiterals ecoreEnumLiteral="atl.ecore#//GradeType/CUSTOM"/>
+      <genEnumLiterals ecoreEnumLiteral="atl.ecore#//GradeType/STARS"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="atl.ecore#//ReviewType">
+      <genEnumLiterals ecoreEnumLiteral="atl.ecore#//ReviewType/ONLYGRADE"/>
+      <genEnumLiterals ecoreEnumLiteral="atl.ecore#//ReviewType/ANNOTATED"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="atl.ecore#//CommentType">
+      <genEnumLiterals ecoreEnumLiteral="atl.ecore#//CommentType/SIMPLE"/>
+      <genEnumLiterals ecoreEnumLiteral="atl.ecore#//CommentType/RICHTEXT"/>
+    </genEnums>
+    <genClasses ecoreClass="atl.ecore#//Model">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference atl.ecore#//Model/subject"/>
+    </genClasses>
+    <genClasses ecoreClass="atl.ecore#//Subject">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute atl.ecore#//Subject/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute atl.ecore#//Subject/featureCount"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference atl.ecore#//Subject/feature"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference atl.ecore#//Subject/userfeedback"/>
+    </genClasses>
+    <genClasses ecoreClass="atl.ecore#//Feature">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute atl.ecore#//Feature/name"/>
+    </genClasses>
+    <genClasses ecoreClass="atl.ecore#//UserFeedback">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute atl.ecore#//UserFeedback/name"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference atl.ecore#//UserFeedback/subject"/>
+    </genClasses>
+    <genClasses ecoreClass="atl.ecore#//Review">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute atl.ecore#//Review/gradeType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute atl.ecore#//Review/type"/>
+    </genClasses>
+    <genClasses ecoreClass="atl.ecore#//Comment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute atl.ecore#//Comment/reply"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute atl.ecore#//Comment/moderation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute atl.ecore#//Comment/commentType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute atl.ecore#//Comment/hasModerationProcess"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference atl.ecore#//Comment/moderationprocess"/>
+    </genClasses>
+    <genClasses ecoreClass="atl.ecore#//ModerationProcess">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute atl.ecore#//ModerationProcess/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute atl.ecore#//ModerationProcess/canDelete"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference atl.ecore#//ModerationProcess/step"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference atl.ecore#//ModerationProcess/startStop"/>
+    </genClasses>
+    <genClasses ecoreClass="atl.ecore#//Step">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute atl.ecore#//Step/name"/>
+    </genClasses>
+    <genClasses ecoreClass="atl.ecore#//End"/>
+    <genClasses ecoreClass="atl.ecore#//ValidationStep">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference atl.ecore#//ValidationStep/nextApprove"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference atl.ecore#//ValidationStep/nextReject"/>
+    </genClasses>
+    <genClasses ecoreClass="atl.ecore#//Automatic">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute atl.ecore#//Automatic/method"/>
+    </genClasses>
+    <genClasses ecoreClass="atl.ecore#//Manual"/>
+  </genPackages>
+</genmodel:GenModel>

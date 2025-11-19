@@ -1,0 +1,58 @@
+@startuml Modelling
+
+class Model 
+
+class Subject {
+    String name
+}
+
+class Feature {
+    Int id
+    String name
+}
+
+Model *-- Subject : [1..1] subject
+Subject *-- Feature : [0..1] feature
+
+abstract class UserFeedback{
+    String name
+}
+
+Subject *-- UserFeedback : [0..1] subject
+UserFeedback *-- Subject : [1..2] userfeedback
+
+class Review {
+    GradeType gradeType  
+    ReviewType reviewType 
+}
+
+enum ReviewType {
+    enum ONLYGRADE
+    enum ANNOTATED
+}
+
+enum GradeType {
+    enum CUSTOM
+    enum STARS
+}
+
+UserFeedback <|-- Review
+
+class Comment {
+    CommentType commentType 
+}
+
+enum CommentType {
+    enum SIMPLE
+    enum RICHTEXT
+}
+
+UserFeedback <|-- Comment
+
+class PublishProcess {
+    string name  
+}
+
+Comment *-- PublishProcess : [0..1] publishprocess
+
+@enduml

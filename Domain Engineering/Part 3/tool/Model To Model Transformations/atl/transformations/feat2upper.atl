@@ -1,0 +1,17 @@
+-- @atlcompiler emftvm
+-- @path ATL=/pt.isep.edom.mq.atl/model/atl.ecore
+
+module feat2upper;
+create OUT : ATL refining IN : ATL;
+
+rule FeatureName2Uppercase {
+	from
+		input : ATL!Feature (input.name.substring(1, 1).toUpper().compareTo(input.name.substring(1, 1))<>0)
+	to 
+		saida : ATL!Feature (
+			name <- input.name.substring(1, 1).toUpper()+input.name.substring(2, input.name.size())
+		)
+		do {
+			('Applied FeatureName2UpperCase for Feature '+input.name).debug();
+		}
+}

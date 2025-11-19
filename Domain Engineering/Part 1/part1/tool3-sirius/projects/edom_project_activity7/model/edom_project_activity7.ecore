@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="edom_project_activity7" nsURI="http://www.example.org/edom_project_activity7"
+    nsPrefix="edom_project_activity7">
+  <eAnnotations source="http://www.eclipse.org/OCL/Import">
+    <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+    <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="Model">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="project" lowerBound="1"
+        upperBound="-1" eType="#//Project" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Project">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="script" lowerBound="1"
+        upperBound="-1" eType="#//Script" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="setting" upperBound="-1"
+        eType="#//Setting" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="build" lowerBound="1" upperBound="-1"
+        eType="#//Build" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rule" lowerBound="1" upperBound="-1"
+        eType="#//Rule" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="task" upperBound="-1" eType="#//Task"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Script"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Setting"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Rule">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="command" lowerBound="1"
+        upperBound="-1" eType="#//Command" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="file" lowerBound="1" upperBound="-1"
+        eType="#//File" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="property" upperBound="-1"
+        eType="#//Property" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Build"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Task">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="mustHaveValue"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="mustHaveValue" value="not self.id.oclIsUndefined()"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="action" lowerBound="1"
+        upperBound="-1" eType="#//Action" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="task" upperBound="-1" eType="#//Task"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
+        eType="#//Parameters" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Command">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="prefix" lowerBound="1"
+        upperBound="-1" eType="#//Prefix" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Prefix"/>
+  <eClassifiers xsi:type="ecore:EClass" name="File">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="mustHaveNameAndUpperCase"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="mustHaveNameAndUpperCase" value="not self.filetype.oclIsUndefined() &#xA;&#x9;&#x9;and self.filetype.substring(1, 1).toUpper().compareTo(self.filetype.substring(1,1))=0"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="filetype" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Property">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
+        eType="#//Parameters" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Parameters"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Action"/>
+</ecore:EPackage>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/make_metamodel_p1/src-gen" creationIcons="false"
+    editDirectory="/make_metamodel_p1.edit/src-gen" editorDirectory="/make_metamodel_p1.editor/src-gen"
+    modelPluginID="make_metamodel_p1" modelName="Make_metamodel_p1" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>make_metamodel_p1.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Make_metamodel_p1" disposableProviderFactory="true" ecorePackage="make_metamodel_p1.ecore#/">
+    <genClasses ecoreClass="make_metamodel_p1.ecore#//Rule">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference make_metamodel_p1.ecore#//Rule/dependencies"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference make_metamodel_p1.ecore#//Rule/target"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference make_metamodel_p1.ecore#//Rule/comands"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute make_metamodel_p1.ecore#//Rule/variables"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute make_metamodel_p1.ecore#//Rule/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference make_metamodel_p1.ecore#//Rule/attributes"/>
+    </genClasses>
+    <genClasses ecoreClass="make_metamodel_p1.ecore#//File">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute make_metamodel_p1.ecore#//File/filename"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference make_metamodel_p1.ecore#//File/functions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference make_metamodel_p1.ecore#//File/depend"/>
+    </genClasses>
+    <genClasses ecoreClass="make_metamodel_p1.ecore#//Command">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute make_metamodel_p1.ecore#//Command/commandline"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference make_metamodel_p1.ecore#//Command/contain"/>
+    </genClasses>
+    <genClasses ecoreClass="make_metamodel_p1.ecore#//Wildcard">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference make_metamodel_p1.ecore#//Wildcard/file"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute make_metamodel_p1.ecore#//Wildcard/wildcards"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference make_metamodel_p1.ecore#//Wildcard/functions"/>
+    </genClasses>
+    <genClasses ecoreClass="make_metamodel_p1.ecore#//Prerequisite">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference make_metamodel_p1.ecore#//Prerequisite/expanded"/>
+    </genClasses>
+    <genClasses ecoreClass="make_metamodel_p1.ecore#//Target">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference make_metamodel_p1.ecore#//Target/expanded"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference make_metamodel_p1.ecore#//Target/prerequisite"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute make_metamodel_p1.ecore#//Target/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference make_metamodel_p1.ecore#//Target/extensionOf"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference make_metamodel_p1.ecore#//Target/attributes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference make_metamodel_p1.ecore#//Target/depend"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference make_metamodel_p1.ecore#//Target/task"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference make_metamodel_p1.ecore#//Target/depends"/>
+    </genClasses>
+    <genClasses ecoreClass="make_metamodel_p1.ecore#//Functions">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute make_metamodel_p1.ecore#//Functions/variables"/>
+    </genClasses>
+    <genClasses ecoreClass="make_metamodel_p1.ecore#//Prefix">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference make_metamodel_p1.ecore#//Prefix/modified"/>
+    </genClasses>
+    <genClasses ecoreClass="make_metamodel_p1.ecore#//Model">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference make_metamodel_p1.ecore#//Model/rules"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference make_metamodel_p1.ecore#//Model/project"/>
+    </genClasses>
+    <genClasses ecoreClass="make_metamodel_p1.ecore#//StatusCode">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute make_metamodel_p1.ecore#//StatusCode/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute make_metamodel_p1.ecore#//StatusCode/description"/>
+    </genClasses>
+    <genClasses ecoreClass="make_metamodel_p1.ecore#//Property"/>
+    <genClasses ecoreClass="make_metamodel_p1.ecore#//Parameters">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute make_metamodel_p1.ecore#//Parameters/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute make_metamodel_p1.ecore#//Parameters/value"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference make_metamodel_p1.ecore#//Parameters/attributes"/>
+    </genClasses>
+    <genClasses ecoreClass="make_metamodel_p1.ecore#//Project">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute make_metamodel_p1.ecore#//Project/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute make_metamodel_p1.ecore#//Project/version"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference make_metamodel_p1.ecore#//Project/setting"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference make_metamodel_p1.ecore#//Project/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference make_metamodel_p1.ecore#//Project/extensionpoint"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference make_metamodel_p1.ecore#//Project/build"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference make_metamodel_p1.ecore#//Project/property"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference make_metamodel_p1.ecore#//Project/parameters"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference make_metamodel_p1.ecore#//Project/script"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference make_metamodel_p1.ecore#//Project/task"/>
+    </genClasses>
+    <genClasses ecoreClass="make_metamodel_p1.ecore#//Description"/>
+    <genClasses ecoreClass="make_metamodel_p1.ecore#//ExtensionPoint"/>
+    <genClasses ecoreClass="make_metamodel_p1.ecore#//Setting"/>
+    <genClasses ecoreClass="make_metamodel_p1.ecore#//Method">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute make_metamodel_p1.ecore#//Method/property"/>
+    </genClasses>
+    <genClasses ecoreClass="make_metamodel_p1.ecore#//Build">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute make_metamodel_p1.ecore#//Build/group"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute make_metamodel_p1.ecore#//Build/version"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference make_metamodel_p1.ecore#//Build/method"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference make_metamodel_p1.ecore#//Build/plugin"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference make_metamodel_p1.ecore#//Build/dependency"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference make_metamodel_p1.ecore#//Build/repository"/>
+    </genClasses>
+    <genClasses ecoreClass="make_metamodel_p1.ecore#//Plugin">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute make_metamodel_p1.ecore#//Plugin/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute make_metamodel_p1.ecore#//Plugin/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute make_metamodel_p1.ecore#//Plugin/id"/>
+    </genClasses>
+    <genClasses ecoreClass="make_metamodel_p1.ecore#//Dependency">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute make_metamodel_p1.ecore#//Dependency/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute make_metamodel_p1.ecore#//Dependency/version"/>
+    </genClasses>
+    <genClasses ecoreClass="make_metamodel_p1.ecore#//Repository">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute make_metamodel_p1.ecore#//Repository/name"/>
+    </genClasses>
+    <genClasses ecoreClass="make_metamodel_p1.ecore#//Task">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute make_metamodel_p1.ecore#//Task/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute make_metamodel_p1.ecore#//Task/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute make_metamodel_p1.ecore#//Task/group"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute make_metamodel_p1.ecore#//Task/enabled"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference make_metamodel_p1.ecore#//Task/defaulttask"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference make_metamodel_p1.ecore#//Task/action"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference make_metamodel_p1.ecore#//Task/attributes"/>
+    </genClasses>
+    <genClasses ecoreClass="make_metamodel_p1.ecore#//DefaultTask"/>
+    <genClasses ecoreClass="make_metamodel_p1.ecore#//Action">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute make_metamodel_p1.ecore#//Action/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute make_metamodel_p1.ecore#//Action/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute make_metamodel_p1.ecore#//Action/type"/>
+    </genClasses>
+    <genClasses ecoreClass="make_metamodel_p1.ecore#//Script">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference make_metamodel_p1.ecore#//Script/task"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,68 @@
+@startuml Gradle
+
+class Model 
+
+class Gradle
+
+Model *-- Gradle : [1..1] gradle
+
+class Project {
+    String name
+    String version
+    String path
+    String description
+    String group
+    String projectDir
+    String buildDir
+}
+
+Gradle *-- Project : [1..*] project
+
+class Task {
+    String name
+    String description
+    String group
+    Bool enabled
+}
+
+Project *-- Task : [0..*] task
+
+class DefaultTask
+
+Task *-- DefaultTask : [1..*] defaulttask
+
+class Action {
+    String name
+    String description  
+    String type
+}
+
+Task *-- Action : [0..*] action
+
+Task *-- Task : [1..*] task
+
+class Script {
+    String property
+    String method  
+}
+
+Task *-- Script : [0..*] script
+
+class Build {
+    String group
+    String version  
+    String dependency
+    String repository
+}
+
+Build *-- Script : [1..*] script
+
+Project *-- Build : [1..*] build
+
+class Plugin {
+    Int plugin
+    String name 
+    String type 
+}
+
+Build *-- Plugin : [0..*] plugin

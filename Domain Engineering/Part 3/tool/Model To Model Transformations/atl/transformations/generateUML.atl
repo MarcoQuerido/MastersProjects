@@ -1,0 +1,22 @@
+-- @atlcompiler emftvm
+-- @path CR2=/atl/model/atl.ecore
+
+module generateUML;
+create OUT : UML from IN : CR2;
+
+rule Model2Model{
+	from
+		m1: CR2!Model
+	to
+		m2: UML!Model (
+			name <- m1.name.toLowerCase()
+			, packagedElement <- Set{ m2Domain}
+		)
+		, m2Domain : UML!Package (
+			name <- 'domain'
+			, packagedElement <- Set{ m1.subject }
+		)
+		do {
+			('Model ' + m1.name + ' created').debug();
+		}
+}

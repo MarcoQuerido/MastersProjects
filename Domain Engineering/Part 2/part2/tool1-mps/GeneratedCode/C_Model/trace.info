@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123140:jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068390468200:jetbrains.mps.baseLanguage.structure.FieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1144226303539:jetbrains.mps.baseLanguage.structure.ForeachStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123159:jetbrains.mps.baseLanguage.structure.IfStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123165:jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242864:jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242878:jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/6329021646629104954:jetbrains.mps.baseLanguage.structure.SingleLineComment" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123157:jetbrains.mps.baseLanguage.structure.Statement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1081236700938:jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1076505808687:jetbrains.mps.baseLanguage.structure.WhileStatement" />
+  <root nodeRef="r:13542a3d-906b-46e8-9fab-902c55d91e9f(MPS.sandbox.C_Model)/4220309337657863395">
+    <file name="Action.java">
+      <node id="1329983791302767142" at="7,0,8,0" concept="2" trace="name" />
+      <node id="1329983791302767142" at="8,0,9,0" concept="2" trace="description" />
+      <node id="1329983791302767142" at="9,0,10,0" concept="2" trace="type" />
+      <node id="1329983791302767142" at="12,63,13,21" concept="1" />
+      <node id="1329983791302767142" at="13,21,14,35" concept="1" />
+      <node id="1329983791302767142" at="14,35,15,21" concept="1" />
+      <node id="1329983791302767142" at="12,0,17,0" concept="0" trace="Action#(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V" />
+      <scope id="1329983791302767142" at="12,63,15,21" />
+      <scope id="1329983791302767142" at="12,0,17,0">
+        <var name="description" id="1329983791302767142" />
+        <var name="name" id="1329983791302767142" />
+        <var name="type" id="1329983791302767142" />
+      </scope>
+      <unit id="1329983791302767142" at="6,0,18,0" name="MPS.sandbox.C_Model.Action" />
+    </file>
+    <file name="Build.java">
+      <node id="1329983791301888197" at="10,0,11,0" concept="2" trace="name" />
+      <node id="1329983791301888197" at="11,0,12,0" concept="2" trace="group" />
+      <node id="1329983791301888197" at="12,0,13,0" concept="2" trace="version" />
+      <node id="1329983791301888197" at="13,0,14,0" concept="2" trace="methods" />
+      <node id="1329983791301888197" at="14,0,15,0" concept="2" trace="dependencies" />
+      <node id="1329983791301888197" at="15,0,16,0" concept="2" trace="repositories" />
+      <node id="1329983791301888197" at="16,0,17,0" concept="2" trace="plugins" />
+      <node id="1329983791301888197" at="20,59,21,21" concept="1" />
+      <node id="1329983791301888197" at="21,21,22,23" concept="1" />
+      <node id="1329983791301888197" at="22,23,23,27" concept="1" />
+      <node id="1329983791301888197" at="23,27,24,97" concept="1" />
+      <node id="1329983791301888197" at="24,97,25,112" concept="1" />
+      <node id="1329983791301888197" at="25,112,26,108" concept="1" />
+      <node id="1329983791301888197" at="26,108,27,110" concept="1" />
+      <node id="1329983791301888197" at="32,27,33,21" concept="7" />
+      <node id="1329983791301888197" at="35,36,36,21" concept="1" />
+      <node id="1329983791301888197" at="38,30,39,24" concept="7" />
+      <node id="1329983791301888197" at="41,42,42,27" concept="1" />
+      <node id="1329983791301888197" at="44,28,45,22" concept="7" />
+      <node id="1329983791301888197" at="47,38,48,23" concept="1" />
+      <node id="1329983791301888197" at="32,0,35,0" concept="5" trace="getName#()Ljava/lang/String;" />
+      <node id="1329983791301888197" at="35,0,38,0" concept="5" trace="setName#(Ljava/lang/String;)V" />
+      <node id="1329983791301888197" at="38,0,41,0" concept="5" trace="getVersion#()Ljava/lang/String;" />
+      <node id="1329983791301888197" at="41,0,44,0" concept="5" trace="setVersion#(Ljava/lang/String;)V" />
+      <node id="1329983791301888197" at="44,0,47,0" concept="5" trace="getGroup#()Ljava/lang/String;" />
+      <node id="1329983791301888197" at="47,0,50,0" concept="5" trace="setGroup#(Ljava/lang/String;)V" />
+      <node id="1329983791301888197" at="20,0,29,0" concept="0" trace="Build#(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V" />
+      <scope id="1329983791301888197" at="32,27,33,21" />
+      <scope id="1329983791301888197" at="35,36,36,21" />
+      <scope id="1329983791301888197" at="38,30,39,24" />
+      <scope id="1329983791301888197" at="41,42,42,27" />
+      <scope id="1329983791301888197" at="44,28,45,22" />
+      <scope id="1329983791301888197" at="47,38,48,23" />
+      <scope id="1329983791301888197" at="32,0,35,0" />
+      <scope id="1329983791301888197" at="35,0,38,0">
+        <var name="name" id="1329983791301888197" />
+      </scope>
+      <scope id="1329983791301888197" at="38,0,41,0" />
+      <scope id="1329983791301888197" at="41,0,44,0">
+        <var name="version" id="1329983791301888197" />
+      </scope>
+      <scope id="1329983791301888197" at="44,0,47,0" />
+      <scope id="1329983791301888197" at="47,0,50,0">
+        <var name="group" id="1329983791301888197" />
+      </scope>
+      <scope id="1329983791301888197" at="20,59,27,110" />
+      <scope id="1329983791301888197" at="20,0,29,0">
+        <var name="group" id="1329983791301888197" />
+        <var name="name" id="1329983791301888197" />
+        <var name="version" id="1329983791301888197" />
+      </scope>
+      <unit id="1329983791301888197" at="9,0,51,0" name="MPS.sandbox.C_Model.Build" />
+    </file>
+    <file name="C_Model.java">
+      <node id="4220309337657863395" at="10,0,11,0" concept="2" trace="projects" />
+      <node id="4220309337657863395" at="11,0,12,0" concept="2" trace="rules" />
+      <node id="4220309337657863395" at="14,20,15,15" concept="8" />
+      <node id="1329983791301888196" at="15,15,16,82" concept="1" />
+      <node id="4220309337657863395" at="16,82,17,0" concept="9" />
+      <node id="4220309337657863395" at="17,0,18,12" concept="8" />
+      <node id="1483502693154678800" at="18,12,19,68" concept="1" />
+      <node id="4220309337657863395" at="19,68,20,0" concept="9" />
+      <node id="4220309337657863395" at="23,22,24,34" concept="1" />
+      <node id="4220309337657863395" at="24,34,25,0" concept="9" />
+      <node id="4220309337657863395" at="26,66,27,21" concept="1" />
+      <node id="4220309337657863395" at="28,5,29,0" concept="9" />
+      <node id="4220309337657863395" at="30,57,31,18" concept="1" />
+      <node id="4220309337657863395" at="32,5,33,0" concept="9" />
+      <node id="4220309337657863395" at="25,0,28,5" concept="3" />
+      <node id="4220309337657863395" at="29,0,32,5" concept="3" />
+      <node id="4220309337657863395" at="14,0,22,0" concept="0" trace="C_Model#()V" />
+      <node id="4220309337657863395" at="23,0,35,0" concept="5" trace="exec#()V" />
+      <scope id="4220309337657863395" at="26,66,27,21" />
+      <scope id="4220309337657863395" at="30,57,31,18" />
+      <scope id="4220309337657863395" at="25,0,28,5">
+        <var name="project" id="4220309337657863395" />
+      </scope>
+      <scope id="4220309337657863395" at="29,0,32,5">
+        <var name="rule" id="4220309337657863395" />
+      </scope>
+      <scope id="4220309337657863395" at="14,20,20,0" />
+      <scope id="4220309337657863395" at="14,0,22,0" />
+      <scope id="4220309337657863395" at="23,22,33,0" />
+      <scope id="4220309337657863395" at="23,0,35,0" />
+      <unit id="4220309337657863395" at="9,0,36,0" name="MPS.sandbox.C_Model.C_Model" />
+    </file>
+    <file name="Command.java">
+      <node id="1483502693154678801" at="7,0,8,0" concept="2" trace="name" />
+      <node id="1483502693154678801" at="8,0,9,0" concept="2" trace="prefix" />
+      <node id="1483502693154678801" at="10,31,11,21" concept="1" />
+      <node id="1483502693154678801" at="11,21,12,36" concept="1" />
+      <node id="1483502693154678801" at="15,27,16,21" concept="7" />
+      <node id="1483502693154678801" at="18,36,19,21" concept="1" />
+      <node id="1483502693154678801" at="15,0,18,0" concept="5" trace="getName#()Ljava/lang/String;" />
+      <node id="1483502693154678801" at="18,0,21,0" concept="5" trace="setName#(Ljava/lang/String;)V" />
+      <node id="1483502693154678801" at="10,0,14,0" concept="0" trace="Command#(Ljava/lang/String;)V" />
+      <scope id="1483502693154678801" at="15,27,16,21" />
+      <scope id="1483502693154678801" at="18,36,19,21" />
+      <scope id="1483502693154678801" at="10,31,12,36" />
+      <scope id="1483502693154678801" at="15,0,18,0" />
+      <scope id="1483502693154678801" at="18,0,21,0">
+        <var name="name" id="1483502693154678801" />
+      </scope>
+      <scope id="1483502693154678801" at="10,0,14,0">
+        <var name="name" id="1483502693154678801" />
+      </scope>
+      <unit id="1483502693154678801" at="6,0,22,0" name="MPS.sandbox.C_Model.Command" />
+    </file>
+    <file name="Dependency.java">
+      <node id="2959254764099083795" at="7,0,8,0" concept="2" trace="name" />
+      <node id="2959254764099083795" at="8,0,9,0" concept="2" trace="version" />
+      <node id="2959254764099083795" at="11,50,12,21" concept="1" />
+      <node id="2959254764099083795" at="12,21,13,27" concept="1" />
+      <node id="2959254764099083795" at="11,0,15,0" concept="0" trace="Dependency#(Ljava/lang/String;Ljava/lang/String;)V" />
+      <scope id="2959254764099083795" at="11,50,13,27" />
+      <scope id="2959254764099083795" at="11,0,15,0">
+        <var name="name" id="2959254764099083795" />
+        <var name="version" id="2959254764099083795" />
+      </scope>
+      <unit id="2959254764099083795" at="6,0,16,0" name="MPS.sandbox.C_Model.Dependency" />
+    </file>
+    <file name="File.java">
+      <node id="1483502693154678802" at="10,0,11,0" concept="2" trace="filename" />
+      <node id="1483502693154678802" at="11,0,12,0" concept="2" trace="functions" />
+      <node id="1483502693154678802" at="13,32,14,29" concept="1" />
+      <node id="1483502693154678802" at="14,29,15,109" concept="1" />
+      <node id="1483502693154678802" at="13,0,17,0" concept="0" trace="File#(Ljava/lang/String;)V" />
+      <scope id="1483502693154678802" at="13,32,15,109" />
+      <scope id="1483502693154678802" at="13,0,17,0">
+        <var name="filename" id="1483502693154678802" />
+      </scope>
+      <unit id="1483502693154678802" at="9,0,18,0" name="MPS.sandbox.C_Model.File" />
+    </file>
+    <file name="Function.java">
+      <node id="1483502693154678803" at="7,0,8,0" concept="2" trace="name" />
+      <node id="1483502693154678803" at="8,0,9,0" concept="2" trace="variables" />
+      <node id="1483502693154678803" at="11,50,12,21" concept="1" />
+      <node id="1483502693154678803" at="12,21,13,31" concept="1" />
+      <node id="1483502693154678803" at="11,0,15,0" concept="0" trace="Function#(Ljava/lang/String;Ljava/lang/String;)V" />
+      <scope id="1483502693154678803" at="11,50,13,31" />
+      <scope id="1483502693154678803" at="11,0,15,0">
+        <var name="name" id="1483502693154678803" />
+        <var name="variables" id="1483502693154678803" />
+      </scope>
+      <unit id="1483502693154678803" at="6,0,16,0" name="MPS.sandbox.C_Model.Function" />
+    </file>
+    <file name="Main.java">
+      <node id="4220309337657863395" at="8,42,9,34" concept="6" />
+      <node id="4220309337657863395" at="8,0,11,0" concept="10" trace="main#([Ljava/lang/String;)V" />
+      <scope id="4220309337657863395" at="8,42,9,34">
+        <var name="model" id="4220309337657863395" />
+      </scope>
+      <scope id="4220309337657863395" at="8,0,11,0">
+        <var name="args" id="4220309337657863395" />
+      </scope>
+      <unit id="4220309337657863395" at="6,0,12,0" name="MPS.sandbox.C_Model.Main" />
+    </file>
+    <file name="Method.java">
+      <node id="2959254764099083611" at="7,0,8,0" concept="2" trace="name" />
+      <node id="2959254764099083611" at="10,30,11,21" concept="1" />
+      <node id="2959254764099083611" at="10,0,13,0" concept="0" trace="Method#(Ljava/lang/String;)V" />
+      <scope id="2959254764099083611" at="10,30,11,21" />
+      <scope id="2959254764099083611" at="10,0,13,0">
+        <var name="name" id="2959254764099083611" />
+      </scope>
+      <unit id="2959254764099083611" at="6,0,14,0" name="MPS.sandbox.C_Model.Method" />
+    </file>
+    <file name="Parameters.java">
+      <node id="1329983791306558230" at="7,0,8,0" concept="2" trace="name" />
+      <node id="1329983791306558232" at="7,0,8,0" concept="2" trace="name" />
+      <node id="1329983791306558230" at="8,0,9,0" concept="2" trace="value" />
+      <node id="1329983791306558232" at="8,0,9,0" concept="2" trace="value" />
+      <node id="1329983791306558230" at="10,48,11,21" concept="1" />
+      <node id="1329983791306558232" at="10,48,11,21" concept="1" />
+      <node id="1329983791306558230" at="11,21,12,23" concept="1" />
+      <node id="1329983791306558232" at="11,21,12,23" concept="1" />
+      <node id="1329983791306558230" at="14,0,16,0" concept="0" trace="Parameters#()V" />
+      <node id="1329983791306558232" at="14,0,16,0" concept="0" trace="Parameters#()V" />
+      <node id="1329983791306558230" at="10,0,14,0" concept="0" trace="Parameters#(Ljava/lang/String;Ljava/lang/String;)V" />
+      <node id="1329983791306558232" at="10,0,14,0" concept="0" trace="Parameters#(Ljava/lang/String;Ljava/lang/String;)V" />
+      <scope id="1329983791306558230" at="14,23,14,23" />
+      <scope id="1329983791306558232" at="14,23,14,23" />
+      <scope id="1329983791306558230" at="10,48,12,23" />
+      <scope id="1329983791306558232" at="10,48,12,23" />
+      <scope id="1329983791306558230" at="14,0,16,0" />
+      <scope id="1329983791306558232" at="14,0,16,0" />
+      <scope id="1329983791306558230" at="10,0,14,0">
+        <var name="name" id="1329983791306558230" />
+        <var name="value" id="1329983791306558230" />
+      </scope>
+      <scope id="1329983791306558232" at="10,0,14,0">
+        <var name="name" id="1329983791306558232" />
+        <var name="value" id="1329983791306558232" />
+      </scope>
+      <unit id="1329983791306558230" at="6,0,20,0" name="MPS.sandbox.C_Model.Parameters" />
+      <unit id="1329983791306558232" at="6,0,20,0" name="MPS.sandbox.C_Model.Parameters" />
+    </file>
+    <file name="Plugin.java">
+      <node id="2959254764099084475" at="7,0,8,0" concept="2" trace="id" />
+      <node id="2959254764099084475" at="8,0,9,0" concept="2" trace="name" />
+      <node id="2959254764099084475" at="9,0,10,0" concept="2" trace="type" />
+      <node id="2959254764099084475" at="12,54,13,17" concept="1" />
+      <node id="2959254764099084475" at="13,17,14,21" concept="1" />
+      <node id="2959254764099084475" at="14,21,15,21" concept="1" />
+      <node id="2959254764099084475" at="12,0,17,0" concept="0" trace="Plugin#(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V" />
+      <scope id="2959254764099084475" at="12,54,15,21" />
+      <scope id="2959254764099084475" at="12,0,17,0">
+        <var name="id" id="2959254764099084475" />
+        <var name="name" id="2959254764099084475" />
+        <var name="type" id="2959254764099084475" />
+      </scope>
+      <unit id="2959254764099084475" at="6,0,18,0" name="MPS.sandbox.C_Model.Plugin" />
+    </file>
+    <file name="Prefix.java">
+      <node id="2959254764101371225" at="7,0,8,0" concept="2" trace="name" />
+      <node id="2959254764101371225" at="10,30,11,21" concept="1" />
+      <node id="2959254764101371225" at="10,0,13,0" concept="0" trace="Prefix#(Ljava/lang/String;)V" />
+      <scope id="2959254764101371225" at="10,30,11,21" />
+      <scope id="2959254764101371225" at="10,0,13,0">
+        <var name="name" id="2959254764101371225" />
+      </scope>
+      <unit id="2959254764101371225" at="6,0,14,0" name="MPS.sandbox.C_Model.Prefix" />
+    </file>
+    <file name="Project.java">
+      <node id="1329983791301888196" at="11,0,12,0" concept="2" trace="name" />
+      <node id="1329983791301888196" at="12,0,13,0" concept="2" trace="version" />
+      <node id="1329983791301888196" at="13,0,14,0" concept="2" trace="properties" />
+      <node id="1329983791301888196" at="14,0,15,0" concept="2" trace="attributes" />
+      <node id="1329983791301888196" at="15,0,16,0" concept="2" trace="builds" />
+      <node id="1329983791301888196" at="16,0,17,0" concept="2" trace="tasks" />
+      <node id="1329983791301888196" at="18,0,19,0" concept="2" trace="scanner" />
+      <node id="1329983791301888196" at="20,47,21,21" concept="1" />
+      <node id="1329983791301888196" at="21,21,22,27" concept="1" />
+      <node id="1329983791301888196" at="22,27,23,107" concept="1" />
+      <node id="1329983791301888196" at="23,107,24,110" concept="1" />
+      <node id="1329983791301888196" at="24,110,25,115" concept="1" />
+      <node id="1329983791301888196" at="25,115,26,123" concept="1" />
+      <node id="1329983791301888196" at="29,22,30,53" concept="1" />
+      <node id="1329983791301888196" at="30,53,31,44" concept="1" />
+      <node id="1329983791301888196" at="31,44,32,0" concept="9" />
+      <node id="1329983791301888196" at="32,0,33,24" concept="6" />
+      <node id="1329983791301888196" at="33,24,34,43" concept="1" />
+      <node id="1329983791301888196" at="34,43,35,0" concept="9" />
+      <node id="1329983791301888196" at="36,25,37,20" concept="6" />
+      <node id="1329983791301888196" at="38,30,39,57" concept="1" />
+      <node id="1329983791301888196" at="39,57,40,16" concept="1" />
+      <node id="1329983791301888196" at="41,7,42,37" concept="1" />
+      <node id="1329983791301888196" at="42,37,43,48" concept="1" />
+      <node id="1329983791301888196" at="43,48,44,33" concept="1" />
+      <node id="1329983791301888196" at="44,33,45,0" concept="9" />
+      <node id="1329983791301888196" at="46,24,47,46" concept="1" />
+      <node id="1329983791301888196" at="45,0,48,7" concept="4" />
+      <node id="1329983791301888196" at="37,20,41,7" concept="3" />
+      <node id="1329983791301888196" at="20,0,28,0" concept="0" trace="Project#(Ljava/lang/String;Ljava/lang/String;)V" />
+      <node id="1329983791301888196" at="35,0,49,5" concept="11" />
+      <node id="1329983791301888196" at="29,0,51,0" concept="5" trace="exec#()V" />
+      <scope id="1329983791301888196" at="46,24,47,46" />
+      <scope id="1329983791301888196" at="38,30,40,16" />
+      <scope id="1329983791301888196" at="37,20,41,7">
+        <var name="b" id="1329983791301888196" />
+      </scope>
+      <scope id="1329983791301888196" at="20,47,26,123" />
+      <scope id="1329983791301888196" at="20,0,28,0">
+        <var name="name" id="1329983791301888196" />
+        <var name="version" id="1329983791301888196" />
+      </scope>
+      <scope id="1329983791301888196" at="36,25,48,7">
+        <var name="index" id="1329983791301888196" />
+      </scope>
+      <scope id="1329983791301888196" at="29,22,49,5">
+        <var name="option" id="1329983791301888196" />
+      </scope>
+      <scope id="1329983791301888196" at="29,0,51,0" />
+      <unit id="1329983791301888196" at="10,0,53,0" name="MPS.sandbox.C_Model.Project" />
+    </file>
+    <file name="Property.java">
+      <node id="1329983791306558228" at="7,0,8,0" concept="2" trace="Prop1" />
+      <node id="1329983791306558228" at="8,0,9,0" concept="2" trace="attribute" />
+      <node id="1329983791306558228" at="11,46,12,25" concept="1" />
+      <node id="1329983791306558228" at="12,25,13,49" concept="1" />
+      <node id="1329983791306558228" at="11,0,15,0" concept="0" trace="Property#(Ljava/lang/String;Ljava/lang/String;)V" />
+      <scope id="1329983791306558228" at="11,46,13,49" />
+      <scope id="1329983791306558228" at="11,0,15,0">
+        <var name="name" id="1329983791306558228" />
+        <var name="value" id="1329983791306558228" />
+      </scope>
+      <unit id="1329983791306558228" at="6,0,17,0" name="MPS.sandbox.C_Model.Property" />
+    </file>
+    <file name="Repository.java">
+      <node id="2959254764099084343" at="7,0,8,0" concept="2" trace="name" />
+      <node id="2959254764099084343" at="10,34,11,21" concept="1" />
+      <node id="2959254764099084343" at="10,0,13,0" concept="0" trace="Repository#(Ljava/lang/String;)V" />
+      <scope id="2959254764099084343" at="10,34,11,21" />
+      <scope id="2959254764099084343" at="10,0,13,0">
+        <var name="name" id="2959254764099084343" />
+      </scope>
+      <unit id="2959254764099084343" at="6,0,14,0" name="MPS.sandbox.C_Model.Repository" />
+    </file>
+    <file name="Rule.java">
+      <node id="1483502693154678800" at="11,0,12,0" concept="2" trace="name" />
+      <node id="1483502693154678800" at="12,0,13,0" concept="2" trace="commands" />
+      <node id="1483502693154678800" at="13,0,14,0" concept="2" trace="targets" />
+      <node id="1483502693154678800" at="15,0,16,0" concept="2" trace="scanner" />
+      <node id="1483502693154678800" at="17,28,18,21" concept="1" />
+      <node id="1483502693154678800" at="18,21,19,99" concept="1" />
+      <node id="1483502693154678800" at="19,99,20,95" concept="1" />
+      <node id="1483502693154678800" at="20,95,21,0" concept="9" />
+      <node id="1483502693154678800" at="21,0,22,0" concept="9" />
+      <node id="1483502693154678800" at="25,22,26,47" concept="1" />
+      <node id="1483502693154678800" at="26,47,27,0" concept="9" />
+      <node id="1483502693154678800" at="27,0,28,24" concept="6" />
+      <node id="1483502693154678800" at="28,24,29,45" concept="1" />
+      <node id="1483502693154678800" at="29,45,30,0" concept="9" />
+      <node id="1483502693154678800" at="31,25,32,20" concept="6" />
+      <node id="1483502693154678800" at="33,34,34,57" concept="1" />
+      <node id="1483502693154678800" at="34,57,35,16" concept="1" />
+      <node id="1483502693154678800" at="36,7,37,37" concept="1" />
+      <node id="1483502693154678800" at="37,37,38,48" concept="1" />
+      <node id="1483502693154678800" at="38,48,39,33" concept="1" />
+      <node id="1483502693154678800" at="39,33,40,0" concept="9" />
+      <node id="1483502693154678800" at="41,24,42,46" concept="1" />
+      <node id="1483502693154678800" at="40,0,43,7" concept="4" />
+      <node id="1483502693154678800" at="32,20,36,7" concept="3" />
+      <node id="1483502693154678800" at="17,0,24,0" concept="0" trace="Rule#(Ljava/lang/String;)V" />
+      <node id="1483502693154678800" at="30,0,44,5" concept="11" />
+      <node id="1483502693154678800" at="25,0,46,0" concept="5" trace="exec#()V" />
+      <scope id="1483502693154678800" at="41,24,42,46" />
+      <scope id="1483502693154678800" at="33,34,35,16" />
+      <scope id="1483502693154678800" at="32,20,36,7">
+        <var name="c" id="1483502693154678800" />
+      </scope>
+      <scope id="1483502693154678800" at="17,28,22,0" />
+      <scope id="1483502693154678800" at="17,0,24,0">
+        <var name="name" id="1483502693154678800" />
+      </scope>
+      <scope id="1483502693154678800" at="31,25,43,7">
+        <var name="index" id="1483502693154678800" />
+      </scope>
+      <scope id="1483502693154678800" at="25,22,44,5">
+        <var name="option" id="1483502693154678800" />
+      </scope>
+      <scope id="1483502693154678800" at="25,0,46,0" />
+      <unit id="1483502693154678800" at="10,0,48,0" name="MPS.sandbox.C_Model.Rule" />
+    </file>
+    <file name="Task.java">
+      <node id="1329983791301888200" at="10,0,11,0" concept="2" trace="name" />
+      <node id="1329983791301888200" at="11,0,12,0" concept="2" trace="description" />
+      <node id="1329983791301888200" at="12,0,13,0" concept="2" trace="group" />
+      <node id="1329983791301888200" at="13,0,14,0" concept="2" trace="enable" />
+      <node id="1329983791301888200" at="15,0,16,0" concept="2" trace="actions" />
+      <node id="1329983791301888200" at="19,77,20,24" concept="1" />
+      <node id="1329983791301888200" at="20,24,21,36" concept="1" />
+      <node id="1329983791301888200" at="21,36,22,27" concept="1" />
+      <node id="1329983791301888200" at="23,50,24,44" concept="1" />
+      <node id="1329983791301888200" at="25,5,26,0" concept="9" />
+      <node id="1329983791301888200" at="26,0,27,130" concept="1" />
+      <node id="1329983791301888200" at="27,130,28,0" concept="9" />
+      <node id="1329983791301888200" at="22,27,25,5" concept="4" />
+      <node id="1329983791301888200" at="19,0,30,0" concept="0" trace="Task#(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V" />
+      <scope id="1329983791301888200" at="23,50,24,44" />
+      <scope id="1329983791301888200" at="19,77,28,0" />
+      <scope id="1329983791301888200" at="19,0,30,0">
+        <var name="description" id="1329983791301888200" />
+        <var name="enable" id="1329983791301888200" />
+        <var name="group" id="1329983791301888200" />
+        <var name="name" id="1329983791301888200" />
+      </scope>
+      <unit id="1329983791301888200" at="9,0,32,0" name="MPS.sandbox.C_Model.Task" />
+    </file>
+  </root>
+</debug-info>
+

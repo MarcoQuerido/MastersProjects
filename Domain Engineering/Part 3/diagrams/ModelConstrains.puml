@@ -1,0 +1,92 @@
+@startuml Model Constrains
+
+class Model 
+
+class Subject {
+    String name
+    BigInt featureCount
+}
+
+class Feature {
+    String name
+}
+
+Model *-- Subject : [1..1] subject
+Subject *-- Feature : [0..1] feature
+
+abstract class UserFeedback{
+    String name
+}
+
+Subject *-- UserFeedback : [0..1] subject
+UserFeedback *-- Subject : [1..2] userfeedback
+
+class Review {
+    GradeType gradeType  
+    ReviewType reviewType 
+}
+
+enum ReviewType {
+    enum ONLYGRADE
+    enum ANNOTATED
+}
+
+enum GradeType {
+    enum CUSTOM
+    enum STARS
+}
+
+UserFeedback <|-- Review
+
+class Comment {
+    Boolean reply
+    Boolean moderation
+    CommentType commentType
+    Boolean hasModerationProcess
+}
+
+enum CommentType {
+    enum SIMPLE
+    enum RICHTEXT
+}
+
+UserFeedback <|-- Comment
+
+class ModerationProcess {
+    string name
+    Boolean canDelete
+}
+
+Comment *-- ModerationProcess : [0..1] publishprocess
+
+abstract class Step{
+    String name
+}
+
+ModerationProcess *-- Step : [0..*] step
+
+class End
+
+abstract class ValidationStep
+
+Step <|-- End
+
+Step <|-- ValidationStep
+
+ModerationProcess -> ValidationStep : [1..1] startStop
+
+ValidationStep -> Step : [1..1] nextReject
+
+ValidationStep -> Step : [1..1] nextApprove
+
+class Automatic{
+    String method
+}
+
+class Manual
+
+ValidationStep <|-- Automatic
+
+ValidationStep <|-- Manual
+
+@enduml

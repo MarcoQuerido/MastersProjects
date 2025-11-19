@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="make_metamodel_p1" nsURI="http://www.example.org/make_metamodel_p1"
+    nsPrefix="make_metamodel_p1">
+  <eAnnotations source="http://www.eclipse.org/OCL/Import">
+    <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+    <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="Rule">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="stringSizeBetween3And15"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="stringSizeBetween3And15" value="self.variables.size() > 3 and self.variables.size() &lt; 15 and self.type.size() > 3 and self.type.size() &lt; 15"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dependencies" lowerBound="1"
+        eType="#//File" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+        upperBound="-1" eType="#//File" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="comands" lowerBound="1"
+        upperBound="-1" eType="#//Command" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="variables" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" lowerBound="1"
+        upperBound="-1" eType="#//Property" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="File">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="stringSizeBetween3And15"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="stringSizeBetween3And15" value="self.filename.size() > 3 and self.filename.size() &lt; 15"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="filename" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="functions" lowerBound="1"
+        upperBound="-1" eType="#//Functions" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="depend" upperBound="-1"
+        eType="#//File"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Command">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="stringSizeBetween3And15 mustHaveStatusCode"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="stringSizeBetween3And15" value="self.commandline.size() > 3 and self.commandline.size() &lt; 15"/>
+      <details key="mustHaveStatusCode" value="not self.commandline.oclIsUndefined() implies not self.contain.id.oclIsUndefined()"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="commandline" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contain" lowerBound="1"
+        eType="#//StatusCode" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Wildcard">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="stringSizeBetween3And15"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="stringSizeBetween3And15" value="self.wildcards.size() > 3 and self.wildcards.size() &lt; 15"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="file" upperBound="-1" eType="#//File"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="wildcards" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="functions" lowerBound="1"
+        upperBound="-1" eType="#//Functions" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Prerequisite">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expanded" upperBound="-1"
+        eType="#//Wildcard" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Target">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="stringSizeBetween3And15"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="stringSizeBetween3And15" value="self.type.size() > 3 and self.type.size() &lt; 15"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expanded" upperBound="-1"
+        eType="#//Wildcard" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="prerequisite" upperBound="-1"
+        eType="#//Prerequisite" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="extensionOf" upperBound="-1"
+        eType="#//ExtensionPoint" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
+        eType="#//Parameters" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="depend" eType="#//Target"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="task" upperBound="-1" eType="#//Task"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="depends" upperBound="-1"
+        eType="#//ExtensionPoint"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Functions">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="stringSizeBetween3And15"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="stringSizeBetween3And15" value="self.variables.size() > 3 and self.variables.size() &lt; 15"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="variables" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Prefix">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="modified" lowerBound="1"
+        upperBound="-1" eType="#//Command" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Model">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rules" upperBound="-1"
+        eType="#//Rule" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="project" lowerBound="1"
+        upperBound="-1" eType="#//Project" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StatusCode">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="stringSizeBetween3And15"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="stringSizeBetween3And15" value="self.description.size() > 3 and self.description.size() &lt; 15"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Property"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Parameters">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="mustHaveNameAndUpperCase stringSizeBetween3And15"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="mustHaveNameAndUpperCase" value="not self.name.oclIsUndefined() and self.name.substring(1,1).toUpper().compareTo(self.name.substring(1,1))=0"/>
+      <details key="stringSizeBetween3And15" value="self.name.size() > 3 and self.name.size() &lt; 15 and self.value.size() > 3 and self.value.size() &lt; 15"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
+        eType="#//Property" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Project">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="mustHaveNameAndUpperCase mustHaveVersion stringSizeBetween3And15"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="mustHaveNameAndUpperCase" value="not self.name.oclIsUndefined() and self.name.substring(1,1).toUpper().compareTo(self.name.substring(1,1))=0"/>
+      <details key="mustHaveVersion" value="not self.version.oclIsUndefined()"/>
+      <details key="stringSizeBetween3And15" value="self.name.size() > 3 and self.name.size() &lt; 15 and self.version.size() > 3 and self.version.size() &lt; 15"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="setting" upperBound="-1"
+        eType="#//Setting" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="description" upperBound="-1"
+        eType="#//Description" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="extensionpoint" upperBound="-1"
+        eType="#//ExtensionPoint" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="build" upperBound="-1"
+        eType="#//Build" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="property" upperBound="-1"
+        eType="#//Property" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
+        eType="#//Parameters" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="script" lowerBound="1"
+        upperBound="-1" eType="#//Script" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="task" upperBound="-1" eType="#//Task"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Description"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ExtensionPoint"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Setting"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Method">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="stringSizeBetween3And15"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="stringSizeBetween3And15" value="self.property.size() > 3 and self.property.size() &lt; 15"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="property" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Build">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="mustHaveVersion stringSizeBetween3And15"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="mustHaveVersion" value="not self.version.oclIsUndefined()"/>
+      <details key="stringSizeBetween3And15" value="self.group.size() > 3 and self.group.size() &lt; 15 and self.version.size() > 3 and self.version.size() &lt; 15"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="group" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="method" upperBound="-1"
+        eType="#//Method" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="plugin" upperBound="-1"
+        eType="#//Plugin" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dependency" upperBound="-1"
+        eType="#//Dependency" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="repository" upperBound="-1"
+        eType="#//Repository" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Plugin">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="mustHaveNameAndUpperCase stringSizeBetween3And15"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="mustHaveNameAndUpperCase" value="not self.name.oclIsUndefined() and self.name.substring(1,1).toUpper().compareTo(self.name.substring(1,1))=0"/>
+      <details key="stringSizeBetween3And15" value="self.name.size() > 3 and self.name.size() &lt; 15 and self.type.size() > 3 and self.type.size() &lt; 15"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Dependency">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="mustHaveVersion mustHaveNameAndUpperCase stringSizeBetween3And15"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="mustHaveVersion" value="not self.version.oclIsUndefined()"/>
+      <details key="mustHaveNameAndUpperCase" value="not self.name.oclIsUndefined() and self.name.substring(1,1).toUpper().compareTo(self.name.substring(1,1))=0"/>
+      <details key="stringSizeBetween3And15" value="self.name.size() > 3 and self.name.size() &lt; 15 and self.version.size() > 3 and self.version.size() &lt; 15"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Repository">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="mustHaveNameAndUpperCase stringSizeBetween3And15"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="mustHaveNameAndUpperCase" value="not self.name.oclIsUndefined() and self.name.substring(1,1).toUpper().compareTo(self.name.substring(1,1))=0"/>
+      <details key="stringSizeBetween3And15" value="self.name.size() > 3 and self.name.size() &lt; 15"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Task">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="mustHaveNameAndUpperCase stringSizeBetween3And15"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="mustHaveNameAndUpperCase" value="not self.name.oclIsUndefined() and self.name.substring(1,1).toUpper().compareTo(self.name.substring(1,1))=0"/>
+      <details key="stringSizeBetween3And15" value="self.name.size() > 3 and self.name.size() &lt; 15 and self.description.size() > 3 and self.description.size() &lt; 15 and self.group.size() > 3 and self.group.size() &lt; 15"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="group" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="enabled" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="defaulttask" lowerBound="1"
+        upperBound="-1" eType="#//DefaultTask" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="action" upperBound="-1"
+        eType="#//Action" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
+        eType="#//Parameters" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DefaultTask"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Action">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="mustHaveNameAndUpperCase stringSizeBetween3And15"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="mustHaveNameAndUpperCase" value="not self.name.oclIsUndefined() and self.name.substring(1,1).toUpper().compareTo(self.name.substring(1,1))=0"/>
+      <details key="stringSizeBetween3And15" value="self.name.size() > 3 and self.name.size() &lt; 15 and self.description.size() > 3 and self.description.size() &lt; 15 and self.type.size() > 3 and self.type.size() &lt; 15"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Script">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="task" eType="#//Task"/>
+  </eClassifiers>
+</ecore:EPackage>

@@ -1,0 +1,150 @@
+@startuml
+
+class model_test << (S,#FF7700) >> {
+}
+
+class Project << (S,#696969) >> {
+}
+
+class property1 << (S,#FF69B4) >> {
+}
+
+class dir << (S,#808000) >> {
+}
+
+property1 *-> dir
+
+Project *-> property1
+
+class setting << (S,#FFD700) >> {
+}
+
+Project *-> setting
+
+class project_desc << (S,#7FFFD4) >> {
+}
+
+Project *-> project_desc
+
+class Proj_dir << (S,#808000) >> {
+}
+
+Project *-> Proj_dir
+
+class first_build << (S,#00BFFF) >> {
+}
+
+class method1 << (S,#ADFF2F) >> {
+}
+
+first_build *-> method1
+
+class depend1 << (S,#B0C4DE) >> {
+}
+
+first_build *-> depend1
+
+class repo1 << (S,#F08080) >> {
+}
+
+first_build *-> repo1
+
+class plugin << (S,#CD853F) >> {
+}
+
+first_build *-> plugin
+
+Project *-> first_build
+
+class expt1 << (S,#40E0D0) >> {
+}
+
+class target1 << (S,#FFFAFA) >> {
+}
+
+class dir << (S,#808000) >> {
+}
+
+target1 *-> dir
+
+class pr1 << (S,#FF00FF) >> {
+}
+
+class WC1 << (S,#E6E6FA) >> {
+}
+
+class function1 << (S,#32CD32) >> {
+}
+
+WC1 *-> function1
+
+class Fl1 << (S,#00FF00) >> {
+}
+
+class function1 << (S,#32CD32) >> {
+}
+
+Fl1 *-> function1
+
+WC1 *-> Fl1
+
+pr1 *-> WC1
+
+target1 *-> pr1
+
+expt1 *-> target1
+
+Project *-> expt1
+
+class Rl1 << (S,#FF6347) >> {
+}
+
+class Cd1 << (S,#ADD8E6) >> {
+}
+
+class sc1 << (S,#F0E68C) >> {
+}
+
+Cd1 *-> sc1
+
+class pfx1 << (S,#FFDEAD) >> {
+}
+
+Cd1 *-> pfx1
+
+Rl1 *-> Cd1
+
+class Ppt1 << (S,#FF69B4) >> {
+}
+
+class name << (S,#808000) >> {
+}
+
+Ppt1 *-> name
+
+Rl1 *-> Ppt1
+
+class Fl1 << (S,#00FF00) >> {
+}
+
+class function1 << (S,#32CD32) >> {
+}
+
+Fl1 *-> function1
+
+Rl1 *-> Fl1
+
+class Fl1 << (S,#00FF00) >> {
+}
+
+class function1 << (S,#32CD32) >> {
+}
+
+Fl1 *-> function1
+
+Rl1 *-> Fl1
+
+Project *-> Rl1
+
+model_test *-> Project
+@enduml

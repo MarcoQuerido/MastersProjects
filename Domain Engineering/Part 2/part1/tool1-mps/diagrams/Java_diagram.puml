@@ -1,0 +1,85 @@
+@startuml
+
+class Java_Model << (S,#FF7700) >> {
+}
+
+class JavaProject << (S,#696969) >> {
+}
+
+class Setting1 << (S,#FFD700) >> {
+}
+
+JavaProject *-> Setting1
+
+class Build1 << (S,#00BFFF) >> {
+}
+
+JavaProject *-> Build1
+
+class Build << (S,#FF6347) >> {
+}
+
+class BuildCommand << (S,#ADD8E6) >> {
+}
+
+class SC1 << (S,#F0E68C) >> {
+}
+
+BuildCommand *-> SC1
+
+class Prefix1 << (S,#FFDEAD) >> {
+}
+
+BuildCommand *-> Prefix1
+
+Build *-> BuildCommand
+
+class Property << (S,#FF69B4) >> {
+}
+
+class GradlewBuild << (S,#808000) >> {
+}
+
+Property *-> GradlewBuild
+
+Build *-> Property
+
+class JarFile << (S,#00FF00) >> {
+}
+
+class Main << (S,#32CD32) >> {
+}
+
+JarFile *-> Main
+
+class Gets << (S,#32CD32) >> {
+}
+
+JarFile *-> Gets
+
+Build *-> JarFile
+
+class Class1 << (S,#00FF00) >> {
+}
+
+class Main << (S,#32CD32) >> {
+}
+
+Class1 *-> Main
+
+Build *-> Class1
+
+class Class2 << (S,#00FF00) >> {
+}
+
+class Gets << (S,#32CD32) >> {
+}
+
+Class2 *-> Gets
+
+Build *-> Class2
+
+JavaProject *-> Build
+
+Java_Model *-> JavaProject
+@enduml

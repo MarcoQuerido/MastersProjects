@@ -1,0 +1,19 @@
+-- @atlcompiler emftvm
+-- @path MM=/edom_project_activity7/model/edom_project_activity7.ecore
+-- @path MM1=/edom_project_activity7/model/edom_project_activity7.ecore
+
+module featureName2Upper;
+create OUT : MM1 from IN : MM;
+
+rule FeatureName2UpperCase {
+	from
+		t1 : MM!Project (t1.name.substring(1, 1).toUpper().compareTo(t1.name.substring(1, 1))<>0)
+	to
+		t2 : MM2!Project (
+			name <- t1.name.substring(1, 1).toUpper() + t1.name.substring(2, t1.name.size())
+	)
+	do {
+		-- debug can be used to print to the console
+		(’Applied FeatureName2UpperCase for Project ’+t1.name).debug();
+	}
+}

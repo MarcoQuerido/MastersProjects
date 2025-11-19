@@ -1,0 +1,19 @@
+-- @atlcompiler emftvm
+-- @path MM=/edom_metamodel/model/test_project.ecore
+-- @path MM1=/edom_metamodel/model/test_project.ecore
+
+module featureMustHaveVersion;
+create OUT : MM1 from IN : MM;
+
+rule FeatureMustHaveVersion {
+	from
+		t1 : YABL!Project
+	to
+		t2 : YABL2!Project (
+			version <- 0
+	)
+	do {
+		-- debug can be used to print to the console
+		(’Applied FeatureName2UpperCase for Feature ’+t1.name).debug();
+	}
+}

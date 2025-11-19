@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yabl:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:yabl="http://www.example.org/yabl" name="YABL">
+  <project name="ProjectName" version="1">
+    <task name="TaskName" description="Desc" group="A">
+      <action name="ActionName" description="Desc" type="A"/>
+      <script name="ScriptName"/>
+    </task>
+    <parameters name="ParametersName" value="String"/>
+    <property name="PropertyName"/>
+    <build version="1" name="BuildName">
+      <plugin name="PluginName" type="Startup"/>
+      <repository name="RepositoryName"/>
+      <dependency group="A" version="1" name="DependencyName"/>
+      <method name="MethodName" property="PropertyName"/>
+    </build>
+    <targets filename="FileName">
+      <attributes name="ParametersName2"/>
+      <functions name="FunctionName"/>
+      <prerequisites filename="Prerequisites"/>
+      <target filename="Target"/>
+    </targets>
+  </project>
+  <rule name="RuleName" type="Imperative">
+    <attributes name="PropertyName">
+      <parameters name="ParametersName" value="String"/>
+    </attributes>
+    <commands name="CommandName" commandline="Default">
+      <modified name="PrefixName"/>
+    </commands>
+    <target filename="FileName">
+      <attributes name="ParametersName" value="String"/>
+      <functions name="FunctionName" variables="Int"/>
+    </target>
+  </rule>
+</yabl:Model>

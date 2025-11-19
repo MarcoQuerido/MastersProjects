@@ -1,0 +1,381 @@
+/**
+ */
+package cr2.util;
+
+import cr2.*;
+
+import java.util.Map;
+
+import org.eclipse.emf.common.util.Diagnostic;
+import org.eclipse.emf.common.util.DiagnosticChain;
+import org.eclipse.emf.common.util.ResourceLocator;
+
+import org.eclipse.emf.ecore.EPackage;
+
+import org.eclipse.emf.ecore.util.EObjectValidator;
+
+/**
+ * <!-- begin-user-doc -->
+ * The <b>Validator</b> for the model.
+ * <!-- end-user-doc -->
+ * @see cr2.Cr2Package
+ * @generated
+ */
+public class Cr2Validator extends EObjectValidator {
+	/**
+	 * The cached model package
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final Cr2Validator INSTANCE = new Cr2Validator();
+
+	/**
+	 * A constant for the {@link org.eclipse.emf.common.util.Diagnostic#getSource() source} of diagnostic {@link org.eclipse.emf.common.util.Diagnostic#getCode() codes} from this package.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.common.util.Diagnostic#getSource()
+	 * @see org.eclipse.emf.common.util.Diagnostic#getCode()
+	 * @generated
+	 */
+	public static final String DIAGNOSTIC_SOURCE = "cr2";
+
+	/**
+	 * A constant with a fixed name that can be used as the base value for additional hand written constants.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private static final int GENERATED_DIAGNOSTIC_CODE_COUNT = 0;
+
+	/**
+	 * A constant with a fixed name that can be used as the base value for additional hand written constants in a derived class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static final int DIAGNOSTIC_CODE_COUNT = GENERATED_DIAGNOSTIC_CODE_COUNT;
+
+	/**
+	 * Creates an instance of the switch.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Cr2Validator() {
+		super();
+	}
+
+	/**
+	 * Returns the package of this validator switch.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EPackage getEPackage() {
+	  return Cr2Package.eINSTANCE;
+	}
+
+	/**
+	 * Calls <code>validateXXX</code> for the corresponding classifier of the model.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected boolean validate(int classifierID, Object value, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		switch (classifierID) {
+			case Cr2Package.MODEL:
+				return validateModel((Model)value, diagnostics, context);
+			case Cr2Package.SUBJECT:
+				return validateSubject((Subject)value, diagnostics, context);
+			case Cr2Package.FEATURE:
+				return validateFeature((Feature)value, diagnostics, context);
+			case Cr2Package.USER_FEEDBACK:
+				return validateUserFeedback((UserFeedback)value, diagnostics, context);
+			case Cr2Package.REVIEW:
+				return validateReview((Review)value, diagnostics, context);
+			case Cr2Package.COMMENT:
+				return validateComment((Comment)value, diagnostics, context);
+			case Cr2Package.MODERATION_PROCESS:
+				return validateModerationProcess((ModerationProcess)value, diagnostics, context);
+			case Cr2Package.STEP:
+				return validateStep((Step)value, diagnostics, context);
+			case Cr2Package.END:
+				return validateEnd((End)value, diagnostics, context);
+			case Cr2Package.VALIDATION_STEP:
+				return validateValidationStep((ValidationStep)value, diagnostics, context);
+			case Cr2Package.AUTOMATIC:
+				return validateAutomatic((Automatic)value, diagnostics, context);
+			case Cr2Package.MANUAL:
+				return validateManual((Manual)value, diagnostics, context);
+			case Cr2Package.GRADE_TYPE:
+				return validateGradeType((GradeType)value, diagnostics, context);
+			case Cr2Package.REVIEW_TYPE:
+				return validateReviewType((ReviewType)value, diagnostics, context);
+			case Cr2Package.COMMENT_TYPE:
+				return validateCommentType((CommentType)value, diagnostics, context);
+			default:
+				return true;
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateModel(Model model, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(model, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateSubject(Subject subject, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(subject, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(subject, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(subject, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(subject, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(subject, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(subject, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(subject, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(subject, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(subject, diagnostics, context);
+		if (result || diagnostics != null) result &= validateSubject_userFeedbackOfDifferentTypes(subject, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * The cached validation expression for the userFeedbackOfDifferentTypes constraint of '<em>Subject</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static final String SUBJECT__USER_FEEDBACK_OF_DIFFERENT_TYPES__EEXPRESSION = "self.userfeedback->isUnique(oclType().name)";
+
+	/**
+	 * Validates the userFeedbackOfDifferentTypes constraint of '<em>Subject</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateSubject_userFeedbackOfDifferentTypes(Subject subject, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return
+			validate
+				(Cr2Package.Literals.SUBJECT,
+				 subject,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+				 "userFeedbackOfDifferentTypes",
+				 SUBJECT__USER_FEEDBACK_OF_DIFFERENT_TYPES__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 DIAGNOSTIC_SOURCE,
+				 0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateFeature(Feature feature, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(feature, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(feature, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(feature, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(feature, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(feature, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(feature, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(feature, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(feature, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(feature, diagnostics, context);
+		if (result || diagnostics != null) result &= validateFeature_nameValidation(feature, diagnostics, context);
+		if (result || diagnostics != null) result &= validateFeature_nameMustBeUnique(feature, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * The cached validation expression for the nameValidation constraint of '<em>Feature</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static final String FEATURE__NAME_VALIDATION__EEXPRESSION = "not self.name.oclIsUndefined() and self.name.size() > 3 and self.name.substring(1,1).toUpper().compareTo(self.name.substring(1,1))=0";
+
+	/**
+	 * Validates the nameValidation constraint of '<em>Feature</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateFeature_nameValidation(Feature feature, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return
+			validate
+				(Cr2Package.Literals.FEATURE,
+				 feature,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+				 "nameValidation",
+				 FEATURE__NAME_VALIDATION__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 DIAGNOSTIC_SOURCE,
+				 0);
+	}
+
+	/**
+	 * The cached validation expression for the nameMustBeUnique constraint of '<em>Feature</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static final String FEATURE__NAME_MUST_BE_UNIQUE__EEXPRESSION = "Feature.allInstances()->isUnique(e | e.name)";
+
+	/**
+	 * Validates the nameMustBeUnique constraint of '<em>Feature</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateFeature_nameMustBeUnique(Feature feature, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return
+			validate
+				(Cr2Package.Literals.FEATURE,
+				 feature,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+				 "nameMustBeUnique",
+				 FEATURE__NAME_MUST_BE_UNIQUE__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 DIAGNOSTIC_SOURCE,
+				 0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateUserFeedback(UserFeedback userFeedback, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(userFeedback, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateReview(Review review, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(review, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateComment(Comment comment, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(comment, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateModerationProcess(ModerationProcess moderationProcess, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(moderationProcess, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateStep(Step step, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(step, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateEnd(End end, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(end, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateValidationStep(ValidationStep validationStep, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(validationStep, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateAutomatic(Automatic automatic, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(automatic, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateManual(Manual manual, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(manual, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateGradeType(GradeType gradeType, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateReviewType(ReviewType reviewType, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateCommentType(CommentType commentType, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * Returns the resource locator that will be used to fetch messages for this validator's diagnostics.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ResourceLocator getResourceLocator() {
+		// TODO
+		// Specialize this to return a resource locator for messages specific to this validator.
+		// Ensure that you remove @generated or mark it @generated NOT
+		return super.getResourceLocator();
+	}
+
+} //Cr2Validator

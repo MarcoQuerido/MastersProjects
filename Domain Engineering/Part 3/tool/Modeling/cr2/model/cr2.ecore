@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="cr2" nsURI="http://www.example.org/cr2" nsPrefix="cr2">
+  <eClassifiers xsi:type="ecore:EClass" name="Model">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subject" lowerBound="1"
+        eType="#//Subject" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Subject">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="feature" eType="#//Feature"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="userfeedback" lowerBound="1"
+        upperBound="2" eType="#//UserFeedback" containment="true" eOpposite="#//UserFeedback/subject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Feature">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UserFeedback" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subject" eType="#//Subject"
+        eOpposite="#//Subject/userfeedback"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Review" eSuperTypes="#//UserFeedback">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="gradeType" eType="#//GradeType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="reviewType" eType="#//ReviewType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Comment" eSuperTypes="#//UserFeedback">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="commentType" eType="#//CommentType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="publishprocess" eType="#//PublishProcess"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="GradeType">
+    <eLiterals name="CUSTOM"/>
+    <eLiterals name="STARS" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="CommentType">
+    <eLiterals name="SIMPLE"/>
+    <eLiterals name="RICHTEXT" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ReviewType">
+    <eLiterals name="ONLYGRADE"/>
+    <eLiterals name="ANNOTATED" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PublishProcess">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+</ecore:EPackage>

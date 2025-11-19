@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="ASCII"?>
+<gmfgraph:Canvas xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition" name="cr2">
+  <figures name="Default">
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="SubjectUserfeedbackFigureTargetDecoration"/>
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="ValidationStepNextApproveFigureTargetDecoration"/>
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="ValidationStepNextRejectFigureTargetDecoration"/>
+    <descriptors name="SubjectFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="SubjectFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="SubjectLabelFigure" text="Subject">
+          <maximumSize dx="10000" dy="50"/>
+        </children>
+        <children xsi:type="gmfgraph:Label" name="SubjectFeatureCountLabelFigure"/>
+        <children xsi:type="gmfgraph:Rectangle" name="SubjectFeatureCompartmentFigure" outline="false"/>
+      </actualFigure>
+      <accessors accessor="getFigureSubjectLabelFigure" figure="//@figures.0/@descriptors.0/@actualFigure/@children.0"/>
+      <accessors accessor="getFigureSubjectFeatureCountLabelFigure" figure="//@figures.0/@descriptors.0/@actualFigure/@children.1"/>
+      <accessors accessor="getSubjectFeatureCompartmentFigure" figure="//@figures.0/@descriptors.0/@actualFigure/@children.2"/>
+    </descriptors>
+    <descriptors name="FeatureFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="FeatureFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="FeatureLabelFigure" text="Feature"/>
+      </actualFigure>
+      <accessors accessor="getFigureFeatureLabelFigure" figure="//@figures.0/@descriptors.1/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="ReviewFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="ReviewFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="ReviewLabelFigure" text="Review"/>
+      </actualFigure>
+      <accessors accessor="getFigureReviewLabelFigure" figure="//@figures.0/@descriptors.2/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="CommentFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="CommentFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="CommentLabelFigure" text="Comment"/>
+      </actualFigure>
+      <accessors accessor="getFigureCommentLabelFigure" figure="//@figures.0/@descriptors.3/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="ModerationProcessFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="ModerationProcessFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="ModerationProcessLabelFigure" text="ModerationProcess">
+          <maximumSize dx="10000" dy="50"/>
+        </children>
+        <children xsi:type="gmfgraph:Rectangle" name="ModerationProcessStepCompartmentFigure" outline="false"/>
+      </actualFigure>
+      <accessors accessor="getFigureModerationProcessLabelFigure" figure="//@figures.0/@descriptors.4/@actualFigure/@children.0"/>
+      <accessors accessor="getModerationProcessStepCompartmentFigure" figure="//@figures.0/@descriptors.4/@actualFigure/@children.1"/>
+    </descriptors>
+    <descriptors name="EndFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="EndFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="EndLabelFigure" text="End"/>
+      </actualFigure>
+      <accessors accessor="getFigureEndLabelFigure" figure="//@figures.0/@descriptors.5/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="AutomaticFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="AutomaticFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="AutomaticLabelFigure" text="Automatic"/>
+      </actualFigure>
+      <accessors accessor="getFigureAutomaticLabelFigure" figure="//@figures.0/@descriptors.6/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="ManualFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="ManualFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="ManualLabelFigure" text="Manual"/>
+      </actualFigure>
+      <accessors accessor="getFigureManualLabelFigure" figure="//@figures.0/@descriptors.7/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="SubjectUserfeedbackFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="SubjectUserfeedbackFigure" targetDecoration="//@figures.0/@figures.0"/>
+    </descriptors>
+    <descriptors name="SubjectUserfeedbackExternalLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="SubjectUserfeedbackExternalLabel"/>
+    </descriptors>
+    <descriptors name="ValidationStepNextApproveFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="ValidationStepNextApproveFigure" targetDecoration="//@figures.0/@figures.1"/>
+    </descriptors>
+    <descriptors name="ValidationStepNextApproveExternalLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="ValidationStepNextApproveExternalLabel"/>
+    </descriptors>
+    <descriptors name="ValidationStepNextRejectFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="ValidationStepNextRejectFigure" targetDecoration="//@figures.0/@figures.2"/>
+    </descriptors>
+    <descriptors name="ValidationStepNextRejectExternalLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="ValidationStepNextRejectExternalLabel"/>
+    </descriptors>
+  </figures>
+  <nodes name="Subject" figure="SubjectFigure"/>
+  <nodes name="Feature" figure="FeatureFigure"/>
+  <nodes name="Review" figure="ReviewFigure"/>
+  <nodes name="Comment" figure="CommentFigure"/>
+  <nodes name="ModerationProcess" figure="ModerationProcessFigure"/>
+  <nodes name="End" figure="EndFigure"/>
+  <nodes name="Automatic" figure="AutomaticFigure"/>
+  <nodes name="Manual" figure="ManualFigure"/>
+  <connections name="SubjectUserfeedback" figure="SubjectUserfeedbackFigure"/>
+  <connections name="ValidationStepNextApprove" figure="ValidationStepNextApproveFigure"/>
+  <connections name="ValidationStepNextReject" figure="ValidationStepNextRejectFigure"/>
+  <compartments name="SubjectFeatureCompartment" figure="SubjectFigure" collapsible="true" accessor="//@figures.0/@descriptors.0/@accessors.2"/>
+  <compartments name="ModerationProcessStepCompartment" figure="ModerationProcessFigure" collapsible="true" accessor="//@figures.0/@descriptors.4/@accessors.1"/>
+  <labels name="SubjectLabel" figure="SubjectFigure" accessor="//@figures.0/@descriptors.0/@accessors.0"/>
+  <labels name="SubjectFeatureCountLabel" figure="SubjectFigure" elementIcon="false" accessor="//@figures.0/@descriptors.0/@accessors.1"/>
+  <labels name="FeatureLabel" figure="FeatureFigure" accessor="//@figures.0/@descriptors.1/@accessors.0"/>
+  <labels name="ReviewLabel" figure="ReviewFigure" accessor="//@figures.0/@descriptors.2/@accessors.0"/>
+  <labels name="CommentLabel" figure="CommentFigure" accessor="//@figures.0/@descriptors.3/@accessors.0"/>
+  <labels name="ModerationProcessLabel" figure="ModerationProcessFigure" accessor="//@figures.0/@descriptors.4/@accessors.0"/>
+  <labels name="EndLabel" figure="EndFigure" accessor="//@figures.0/@descriptors.5/@accessors.0"/>
+  <labels name="AutomaticLabel" figure="AutomaticFigure" accessor="//@figures.0/@descriptors.6/@accessors.0"/>
+  <labels name="ManualLabel" figure="ManualFigure" accessor="//@figures.0/@descriptors.7/@accessors.0"/>
+  <labels name="SubjectUserfeedbackExternalLabel" figure="SubjectUserfeedbackExternalLabelFigure" elementIcon="false"/>
+  <labels name="ValidationStepNextApproveExternalLabel" figure="ValidationStepNextApproveExternalLabelFigure" elementIcon="false"/>
+  <labels name="ValidationStepNextRejectExternalLabel" figure="ValidationStepNextRejectExternalLabelFigure" elementIcon="false"/>
+</gmfgraph:Canvas>

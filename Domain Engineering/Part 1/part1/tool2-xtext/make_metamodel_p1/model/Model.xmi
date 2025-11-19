@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<make_metamodel_p1:Model
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:make_metamodel_p1="http://www.example.org/make_metamodel_p1"
+    xsi:schemaLocation="http://www.example.org/make_metamodel_p1 make_metamodel_p1.ecore">
+  <rules>
+    <dependencies/>
+    <target/>
+    <comands/>
+    <attributes/>
+  </rules>
+</make_metamodel_p1:Model>

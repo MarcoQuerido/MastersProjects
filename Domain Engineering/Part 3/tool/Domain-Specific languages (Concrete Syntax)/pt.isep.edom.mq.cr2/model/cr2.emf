@@ -1,0 +1,107 @@
+@Ecore(invocationDelegates="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot", settingDelegates="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot", validationDelegates="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot")
+@namespace(uri="http://www.example.org/cr2", prefix="cr2")
+@gmf
+package cr2;
+
+@gmf.diagram(diagram.extention="cr2diagram")
+class Model {
+	@gmf.compartment
+	val Subject[1] subject;
+	attr String name;
+}
+
+@Ecore(constraints="userFeedbackOfDifferentTypes")
+@"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(userFeedbackOfDifferentTypes="self.userfeedback->isUnique(oclType().name)")
+@gmf.node(label="name")
+class Subject {
+	attr String name;
+	@gmf.compartment(layout="list")
+	val Feature[*] feature;
+	@gmf.link(target.decoration="arrow")
+	val UserFeedback[1..2]#subject userfeedback;
+
+	@"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(derivation="self.feature->size()")
+	@gmf.label(label.readOnly="true")
+	readonly volatile transient derived attr EBigInteger featureCount;
+}
+
+@Ecore(constraints="nameValidation nameMustBeUnique")
+@"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(nameValidation="not self.name.oclIsUndefined() and self.name.size() > 3 and self.name.substring(1,1).toUpper().compareTo(self.name.substring(1,1))=0", nameMustBeUnique="Feature.allInstances()->isUnique(e | e.name)")
+@gmf.node(label="name")
+class Feature {
+	attr String name;
+}
+
+
+abstract class UserFeedback {
+	attr String name;
+	ref Subject#userfeedback subject;
+}
+
+enum GradeType {
+	CUSTOM = 0;
+	STARS = 1;
+}
+
+enum ReviewType {
+	ONLYGRADE = 0;
+	ANNOTATED = 1;
+}
+
+@gmf.node(label="name")
+class Review extends UserFeedback {
+	attr GradeType gradeType;
+	attr ReviewType reviewType;
+}
+
+enum CommentType {
+	SIMPLE = 0;
+	RICHTEXT = 1;
+}
+
+@gmf.node(label="name")
+class Comment extends UserFeedback {
+	attr boolean[1] reply;
+	attr boolean[1] moderation;
+	attr CommentType commentType;
+	val ModerationProcess moderationprocess;
+
+	@"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(derivation="not self.moderationprocess->isEmpty()")
+	readonly volatile transient derived attr boolean[1] hasModerationProcess;
+}
+
+@gmf.node(label="name", phantom="true")
+class ModerationProcess {
+	attr String name;
+	attr boolean[1] canDelete;
+	@gmf.compartment
+	val Step[*] step;
+	ref ValidationStep[1] startStop;
+}
+
+@gmf.node(label="name")
+abstract class Step {
+	attr String name;
+}
+
+@gmf.node(label="name")
+class End extends Step {
+}
+
+@gmf.node(label="name")
+abstract class ValidationStep extends Step {
+	@gmf.link(target.decoration="arrow")
+	ref Step[1] nextApprove;
+	@gmf.link(target.decoration="arrow")
+	ref Step[1] nextReject;
+}
+
+@gmf.node(label="name")
+class Automatic extends ValidationStep {
+	attr String method;
+}
+
+@gmf.node(label="name")
+class Manual extends ValidationStep {
+}
+
