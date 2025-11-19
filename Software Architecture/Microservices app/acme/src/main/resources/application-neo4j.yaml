@@ -1,0 +1,16 @@
+spring:
+  main:
+    allow-circular-references: true
+  neo4j:
+    uri: "bolt://localhost:7689"
+    authentication:
+      username: "neo4j"
+      password: "acmeneo4j"
+logging:
+  level:
+    org:
+      springframework:
+        data:
+          neo4j: DEBUG
+proj:
+  profile: "neo4j"

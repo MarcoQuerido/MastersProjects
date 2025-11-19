@@ -1,0 +1,52 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+  servlet:
+    multipart:
+      enabled: true
+      file-size-threshold: 2KB
+      max-file-size: 200MB
+      max-request-size: 215MB
+  profiles:
+    active: "${ACTIVE_PROFILE}"
+springdoc:
+  api-docs:
+    enabled: true
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui
+jwt:
+  private:
+    key: "classpath:rsa.private.key"
+  public:
+    key: "classpath:rsa.public.key"
+file:
+  upload-dir: "DEV/FileUploads"
+logging:
+  level:
+    com:
+      example:
+        demo: DEBUG
+proj:
+  profile: "neo4j"
+#spring.data.mongodb.host=localhost
+#spring.data.mongodb.port=54323
+#spring.data.mongodb.database=acme
+#spring.data.mongodb.username=admin
+#spring.data.mongodb.password=password
+
+#spring.datasource.url=jdbc:neo4j:bolt://localhost:7687
+#spring.datasource.username=neo4j
+#spring.datasource.password=acmeneo4j
+#spring.datasource.url=jdbc:h2:file:./data/acme;MV_STORE=FALSE;AUTO_SERVER=true;
+#spring.datasource.driverClassName=org.h2.Driver
+#spring.datasource.username=sa
+#spring.datasource.password=gg
+
+#spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+#spring.h2.console.enabled=true
+#spring.h2.console.path=/h2-console
+# access h2 console at http://localhost:8080/h2-console
+server:
+  port: 8099

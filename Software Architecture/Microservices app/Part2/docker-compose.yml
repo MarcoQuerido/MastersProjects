@@ -1,0 +1,345 @@
+version: '3.8'
+services:
+
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    container_name: 'rabbitmq'
+    ports:
+      - "15672:15672"
+    volumes:
+      - ~/.docker-conf/rabbitmq/data/:/var/lib/rabbitmq/
+      - ~/.docker-conf/rabbitmq/log/:/var/log/rabbitmq
+
+  mysql_productEvent:
+    image: mysql:8.0
+    container_name: "mysql_productEvent"
+    cap_add:
+      - SYS_NICE
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    volumes:
+      - mysql_productEvent:/var/lib/mysqlG
+      - ./provision/mysql/init:/docker-entrypoint-initdb.d
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    healthcheck:
+      test: mysqladmin ping -h 127.0.0.1 -u root --password=MYSQL_ROOT_PASSWORD
+      start_period: 5s
+      interval: 5s
+      timeout: 5s
+      retries: 55
+
+  productEvent:
+    image: product-event
+    container_name: "product-event"
+    depends_on:
+      mysql_productEvent:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_started
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql_productEvent:3306/productEventDB
+      RABBITMQ_HOST: rabbitmq
+      RABBITMQ_PORT: 5672
+
+  mysql_productCommand:
+    image: mysql:8.0
+    container_name: "mysql_productCommand"
+    cap_add:
+      - SYS_NICE
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    volumes:
+      - mysql_productCommand:/var/lib/mysqlG
+      - ./provision/mysql/init:/docker-entrypoint-initdb.d
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    healthcheck:
+      test: mysqladmin ping -h 127.0.0.1 -u root --password=MYSQL_ROOT_PASSWORD
+      start_period: 5s
+      interval: 5s
+      timeout: 5s
+      retries: 55
+
+  productCommand:
+    image: product-command
+    container_name: "product-command"
+    depends_on:
+      productEvent:
+        condition: service_started
+      mysql_productCommand:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_started
+    ports:
+      - "7070:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql_productCommand:3306/productCommandDB
+      RABBITMQ_HOST: rabbitmq
+      RABBITMQ_PORT: 5672
+
+
+  mysql_productQuery:
+    image: mysql:8.0
+    container_name: "mysql_productQuery"
+    cap_add:
+      - SYS_NICE
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    volumes:
+      - mysql_productQuery:/var/lib/mysqlG
+      - ./provision/mysql/init:/docker-entrypoint-initdb.d
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    healthcheck:
+      test: mysqladmin ping -h 127.0.0.1 -u root --password=MYSQL_ROOT_PASSWORD
+      start_period: 5s
+      interval: 5s
+      timeout: 5s
+      retries: 55
+
+  productQuery:
+    image: product-query
+    container_name: "product-query"
+    depends_on:
+      productEvent:
+        condition: service_started
+      mysql_productCommand:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_started
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql_productQuery:3306/productQueryDB
+      RABBITMQ_HOST: rabbitmq
+      RABBITMQ_PORT: 5672
+
+
+  mysql_reviewEvent:
+    image: mysql:8.0
+    container_name: "mysql_reviewEvent"
+    cap_add:
+      - SYS_NICE
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    volumes:
+      - mysql_reviewEvent:/var/lib/mysqlG
+      - ./provision/mysql/init:/docker-entrypoint-initdb.d
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    healthcheck:
+      test: mysqladmin ping -h 127.0.0.1 -u root --password=MYSQL_ROOT_PASSWORD
+      start_period: 5s
+      interval: 5s
+      timeout: 5s
+      retries: 55
+
+  reviewEvent:
+    image: review-event
+    container_name: "review-event"
+    depends_on:
+      mysql_reviewEvent:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_started
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql_reviewEvent:3306/reviewEventDB
+      RABBITMQ_HOST: rabbitmq
+      RABBITMQ_PORT: 5672
+
+  mysql_reviewCommand:
+    image: mysql:8.0
+    container_name: "mysql_reviewCommand"
+    cap_add:
+      - SYS_NICE
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    volumes:
+      - mysql_reviewCommand:/var/lib/mysqlG
+      - ./provision/mysql/init:/docker-entrypoint-initdb.d
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    healthcheck:
+      test: mysqladmin ping -h 127.0.0.1 -u root --password=MYSQL_ROOT_PASSWORD
+      start_period: 5s
+      interval: 5s
+      timeout: 5s
+      retries: 55
+  reviewCommand:
+    image: review-command
+    container_name: "review-command"
+    depends_on:
+      reviewEvent:
+        condition: service_started
+      mysql_reviewCommand:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_started
+    ports:
+      - "7170:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql_reviewCommand:3306/reviewCommandDB?sessionVariables=sql_mode='NO_ENGINE_SUBSTITUTION'&jdbcCompliantTruncation=false
+      RABBITMQ_HOST: rabbitmq
+      RABBITMQ_PORT: 5672
+
+  mysql_reviewQuery:
+    image: mysql:8.0
+    container_name: "mysql_reviewQuery"
+    cap_add:
+      - SYS_NICE
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    volumes:
+      - mysql_reviewQuery:/var/lib/mysqlG
+      - ./provision/mysql/init:/docker-entrypoint-initdb.d
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    healthcheck:
+      test: mysqladmin ping -h 127.0.0.1 -u root --password=MYSQL_ROOT_PASSWORD
+      start_period: 5s
+      interval: 5s
+      timeout: 5s
+      retries: 55
+
+  reviewQuery:
+    image: review-query
+    container_name: "review-query"
+    depends_on:
+      reviewEvent:
+        condition: service_started
+      mysql_reviewCommand:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_started
+    ports:
+      - "8180:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql_reviewQuery:3306/reviewQueryDB
+      RABBITMQ_HOST: rabbitmq
+      RABBITMQ_PORT: 5672
+
+  mysql_voteEvent:
+    image: mysql:8.0
+    container_name: "mysql_voteEvent"
+    cap_add:
+      - SYS_NICE
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    volumes:
+      - mysql_voteEvent:/var/lib/mysqlG
+      - ./provision/mysql/init:/docker-entrypoint-initdb.d
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    healthcheck:
+      test: mysqladmin ping -h 127.0.0.1 -u root --password=MYSQL_ROOT_PASSWORD
+      start_period: 5s
+      interval: 5s
+      timeout: 5s
+      retries: 55
+
+  voteEvent:
+    image: vote-event
+    container_name: "vote-event"
+    depends_on:
+      mysql_voteEvent:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_started
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql_voteEvent:3306/voteEventDB
+      RABBITMQ_HOST: rabbitmq
+      RABBITMQ_PORT: 5672
+
+
+  mysql_voteCommand:
+    image: mysql:8.0
+    container_name: "mysql_voteCommand"
+    cap_add:
+      - SYS_NICE
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    volumes:
+      - mysql_voteCommand:/var/lib/mysqlG
+      - ./provision/mysql/init:/docker-entrypoint-initdb.d
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    healthcheck:
+      test: mysqladmin ping -h 127.0.0.1 -u root --password=MYSQL_ROOT_PASSWORD
+      start_period: 5s
+      interval: 5s
+      timeout: 5s
+      retries: 55
+
+  voteCommand:
+    image: vote-command
+    container_name: "vote-command"
+    depends_on:
+      voteEvent:
+        condition: service_started
+      mysql_voteCommand:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_started
+    ports:
+      - "7270:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql_voteCommand:3306/voteCommandDB
+      RABBITMQ_HOST: rabbitmq
+      RABBITMQ_PORT: 5672
+
+  mysql_voteQuery:
+    image: mysql:8.0
+    container_name: "mysql_voteQuery"
+    cap_add:
+      - SYS_NICE
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    volumes:
+      - mysql_voteQuery:/var/lib/mysqlG
+      - ./provision/mysql/init:/docker-entrypoint-initdb.d
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    healthcheck:
+      test: mysqladmin ping -h 127.0.0.1 -u root --password=MYSQL_ROOT_PASSWORD
+      start_period: 5s
+      interval: 5s
+      timeout: 5s
+      retries: 55
+
+  voteQuery:
+    image: vote-query
+    container_name: "vote-query"
+    depends_on:
+      voteEvent:
+        condition: service_started
+      mysql_voteCommand:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_started
+    ports:
+      - "8280:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql_voteQuery:3306/voteQueryDB
+      RABBITMQ_HOST: rabbitmq
+      RABBITMQ_PORT: 5672
+
+volumes:
+  mysql_productEvent:
+    driver: local
+  mysql_productCommand:
+    driver: local
+  mysql_productQuery:
+    driver: local
+  mysql_reviewEvent:
+    driver: local
+  mysql_reviewCommand:
+    driver: local
+  mysql_reviewQuery:
+    driver: local
+  mysql_voteEvent:
+    driver: local
+  mysql_voteCommand:
+    driver: local
+  mysql_voteQuery:
+    driver: local
