@@ -1,0 +1,6 @@
+buyOrder,date,units,unitValue,description,name,barcode,description,price,paymentType,firstLine,municipality,city
+12345,2023/05/04 13:30:00 GMT-04:00,10,25,Example product,Example Company,1234567890,Example product description,250,Credit Card,123 Main St,Anytown,Anystate
+67890,2023/05/03 15:45:00 GMT-04:00,5,10,Another product,Another Company,0987654321,Another product description,50,Debit Card,456 Oak Ave,Anytown,Anystate
+24680,2023/05/02 09:15:00 GMT-04:00,2,5,Third product,Third Company,1357924680,Third product description,10,Cash,789 Pine St,Anycity,Anystate
+13579,2023/05/01 18:20:00 GMT-04:00,1,100,Expensive product,Expensive Company,8642097531,Expensive product description,100,Credit Card,321 Elm St,Anycity,Anystate
+86420,2023/04/30 14:00:00 GMT-04:00,3,7,Discounted product,Discounted Company,7531902468,Discounted product description,15,Cash,654 Maple Ave,Anycity,Anystate

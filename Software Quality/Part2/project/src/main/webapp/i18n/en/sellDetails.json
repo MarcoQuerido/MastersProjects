@@ -1,0 +1,28 @@
+{
+  "trebolApp": {
+    "sellDetails": {
+      "home": {
+        "title": "Sell Details",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Sell Details",
+        "createOrEditLabel": "Create or edit a Sell Details",
+        "notFound": "No Sell Details found"
+      },
+      "created": "A new Sell Details is created with identifier {{ param }}",
+      "updated": "A Sell Details is updated with identifier {{ param }}",
+      "deleted": "A Sell Details is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Sell Details {{ id }}?"
+      },
+      "detail": {
+        "title": "Sell Details"
+      },
+      "id": "Id",
+      "units": "Units",
+      "unitValue": "Unit Value",
+      "description": "Description",
+      "product": "Product",
+      "sell": "Sell"
+    }
+  }
+}

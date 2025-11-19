@@ -1,0 +1,19 @@
+# JMeter generated Header file
+POST /api/authenticate HTTP/1.1	
+Accept	application/json, text/plain, */*
+Accept-Encoding	gzip, deflate, br
+Accept-Language	en,pt-PT;q=0.9,pt;q=0.8,en-US;q=0.7
+Connection	keep-alive
+Content-Length	59
+Content-Type	application/json
+Cookie	jenkins-timestamper-offset=-3600000; Idea-398b98af=c36a2f00-a0cb-4be5-82a8-7fa23aec46ee
+Host	localhost:8080
+Origin	http://localhost:8080
+Referer	http://localhost:8080/login
+Sec-Fetch-Dest	empty
+Sec-Fetch-Mode	cors
+Sec-Fetch-Site	same-origin
+User-Agent	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+sec-ch-ua	"Google Chrome";v="113", "Chromium";v="113", "Not-A.Brand";v="24"
+sec-ch-ua-mobile	?0
+sec-ch-ua-platform	"Windows"

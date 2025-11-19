@@ -1,0 +1,28 @@
+{
+  "applications": "*",
+  "changelogDate": "20230526101811",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "payment_type",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "unique"]
+    }
+  ],
+  "fluentMethods": true,
+  "identifier": "id",
+  "jpaMetamodelFiltering": false,
+  "name": "PaymentType",
+  "orderBy": "id ASC",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

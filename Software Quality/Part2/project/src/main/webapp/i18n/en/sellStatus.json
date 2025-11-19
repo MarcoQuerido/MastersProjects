@@ -1,0 +1,25 @@
+{
+  "trebolApp": {
+    "sellStatus": {
+      "home": {
+        "title": "Sell Statuses",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Sell Status",
+        "createOrEditLabel": "Create or edit a Sell Status",
+        "notFound": "No Sell Statuses found"
+      },
+      "created": "A new Sell Status is created with identifier {{ param }}",
+      "updated": "A Sell Status is updated with identifier {{ param }}",
+      "deleted": "A Sell Status is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Sell Status {{ id }}?"
+      },
+      "detail": {
+        "title": "Sell Status"
+      },
+      "id": "Id",
+      "code": "Code",
+      "name": "Name"
+    }
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "applications": "*",
+  "changelogDate": "20230526101809",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "sell",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "date",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "totalItems",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "netValue",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "transportValue",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "taxesValue",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "totalValue",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "transactionToken",
+      "fieldType": "String",
+      "fieldValidateRules": ["minlength", "maxlength"],
+      "fieldValidateRulesMaxlength": "64",
+      "fieldValidateRulesMinlength": "64"
+    }
+  ],
+  "fluentMethods": true,
+  "identifier": "id",
+  "jpaMetamodelFiltering": false,
+  "name": "Sell",
+  "orderBy": "id ASC",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "sellDetails",
+      "otherEntityRelationshipName": "sell",
+      "relationshipName": "details",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "customer",
+      "relationshipName": "costumer",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityName": "paymentType",
+      "relationshipName": "paymentType",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityName": "sellStatus",
+      "relationshipName": "status",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityName": "billingType",
+      "relationshipName": "billingType",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityName": "billingCompany",
+      "relationshipName": "billingCompany",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "address",
+      "relationshipName": "billingAddress",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "shipper",
+      "relationshipName": "shipper",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "address",
+      "relationshipName": "shippingAddress",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "salesperson",
+      "relationshipName": "salesperson",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

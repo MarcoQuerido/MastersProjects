@@ -1,0 +1,116 @@
+Processed,Method,URI,Flags
+true,GET,http://localhost:8080,Seed
+true,GET,http://localhost:8080/robots.txt,Seed
+true,GET,http://localhost:8080/sitemap.xml,Seed
+true,GET,http://localhost:8080/,Seed
+true,GET,http://localhost:8080/api,Seed
+true,GET,http://localhost:8080/api/account,Seed
+true,GET,http://localhost:8080/api/account/change-password,Seed
+true,GET,http://localhost:8080/api/account/reset-password,Seed
+true,GET,http://localhost:8080/api/account/reset-password/finish,Seed
+true,GET,http://localhost:8080/api/account/reset-password/init,Seed
+true,GET,http://localhost:8080/api/account/sessions,Seed
+true,GET,http://localhost:8080/api/activate?key=key,Seed
+true,GET,http://localhost:8080/api/addresses,Seed
+true,GET,http://localhost:8080/api/addresses/10,Seed
+true,GET,http://localhost:8080/api/admin,Seed
+true,GET,http://localhost:8080/api/admin/users,Seed
+true,GET,http://localhost:8080/api/admin/users/login,Seed
+true,GET,http://localhost:8080/api/admin/users?page=0&size=20&sort=sort,Seed
+true,GET,http://localhost:8080/api/authenticate,Seed
+true,GET,http://localhost:8080/api/authorities,Seed
+true,GET,http://localhost:8080/api/billing-companies,Seed
+true,GET,http://localhost:8080/api/billing-companies/10,Seed
+true,GET,http://localhost:8080/api/billing-types,Seed
+true,GET,http://localhost:8080/api/billing-types/10,Seed
+true,GET,http://localhost:8080/api/costumers,Seed
+true,GET,http://localhost:8080/api/costumers/10,Seed
+true,GET,http://localhost:8080/api/customers,Seed
+true,GET,http://localhost:8080/api/customers/10,Seed
+true,GET,http://localhost:8080/api/logs,Seed
+true,GET,http://localhost:8080/api/logs/,Seed
+true,GET,http://localhost:8080/api/payment-types,Seed
+true,GET,http://localhost:8080/api/payment-types/10,Seed
+true,GET,http://localhost:8080/api/people,Seed
+true,GET,http://localhost:8080/api/people/10,Seed
+true,GET,http://localhost:8080/api/people/3,Seed
+true,GET,http://localhost:8080/api/people/6,Seed
+true,GET,http://localhost:8080/api/people?cacheBuster=1685481957630,Seed
+true,GET,http://localhost:8080/api/product-categories,Seed
+true,GET,http://localhost:8080/api/product-categories/10,Seed
+true,GET,http://localhost:8080/api/product-categories?cacheBuster=1685482140469,Seed
+true,GET,http://localhost:8080/api/products,Seed
+true,GET,http://localhost:8080/api/products/10,Seed
+true,GET,http://localhost:8080/api/products?cacheBuster=1685481864726,Seed
+true,GET,http://localhost:8080/api/register,Seed
+true,GET,http://localhost:8080/api/salespeople,Seed
+true,GET,http://localhost:8080/api/salespeople/10,Seed
+true,GET,http://localhost:8080/api/sell-details,Seed
+true,GET,http://localhost:8080/api/sell-details/10,Seed
+true,GET,http://localhost:8080/api/sell-statuses,Seed
+true,GET,http://localhost:8080/api/sell-statuses/10,Seed
+true,GET,http://localhost:8080/api/sells,Seed
+true,GET,http://localhost:8080/api/sells/10,Seed
+true,GET,http://localhost:8080/api/shippers,Seed
+true,GET,http://localhost:8080/api/shippers/10,Seed
+true,GET,http://localhost:8080/api/shippers?cacheBuster=1685481840480,Seed
+true,GET,http://localhost:8080/api/users,Seed
+true,GET,http://localhost:8080/api/users/,Seed
+true,GET,http://localhost:8080/api/users/?page=0&size=20,Seed
+true,GET,http://localhost:8080/api/users?page=0&size=20&sort=sort,Seed
+true,GET,http://localhost:8080/BitKeeper,Seed
+true,GET,http://localhost:8080/content,Seed
+true,GET,http://localhost:8080/content/,Seed
+true,GET,http://localhost:8080/content/css,Seed
+true,GET,http://localhost:8080/content/css/,Seed
+true,GET,http://localhost:8080/content/css/loading.css,Seed
+true,GET,http://localhost:8080/content/images,Seed
+true,GET,http://localhost:8080/content/images/,Seed
+true,GET,http://localhost:8080/i18n,Seed
+true,GET,http://localhost:8080/i18n/,Seed
+true,GET,http://localhost:8080/i18n/en.json?_=fd90a1c60a90c4bbdd5de321eb244891,Seed
+true,GET,http://localhost:8080/latest,Seed
+true,GET,http://localhost:8080/latest/meta-data,Seed
+true,GET,http://localhost:8080/latest/meta-data/,Seed
+true,GET,http://localhost:8080/login,Seed
+true,GET,http://localhost:8080/main.7e1102e0.js,Seed
+true,GET,http://localhost:8080/management,Seed
+true,GET,http://localhost:8080/management/,Seed
+true,GET,http://localhost:8080/management/configprops,Seed
+true,GET,http://localhost:8080/management/configprops/,Seed
+true,GET,http://localhost:8080/management/env,Seed
+true,GET,http://localhost:8080/management/env/,Seed
+true,GET,http://localhost:8080/management/health,Seed
+true,GET,http://localhost:8080/management/health/,Seed
+true,GET,http://localhost:8080/management/info,Seed
+true,GET,http://localhost:8080/management/jhimetrics,Seed
+true,GET,http://localhost:8080/management/jhiopenapigroups,Seed
+true,GET,http://localhost:8080/management/liquibase,Seed
+true,GET,http://localhost:8080/management/loggers,Seed
+true,GET,http://localhost:8080/management/loggers/,Seed
+true,GET,http://localhost:8080/management/prometheus,Seed
+true,GET,http://localhost:8080/management/threaddump,Seed
+true,GET,http://localhost:8080/manifest.webapp,Seed
+true,GET,http://localhost:8080/mvnw,Seed
+true,GET,http://localhost:8080/v3,Seed
+true,GET,http://localhost:8080/v3/api-docs,Seed
+true,GET,http://localhost:8080/v3/api-docs/,Seed
+false,GET,http://browsehappy.com/,Out of Context
+false,GET,http://stackoverflow.com/tags/jhipster,Out of Context
+false,GET,https://github.com/jhipster/generator-jhipster/blob/main/CONTRIBUTING.md,Out of Context
+false,GET,https://github.com/jhipster/generator-jhipster/issues/new/choose,Out of Context
+false,GET,https://gitter.im/jhipster/generator-jhipster,Out of Context
+true,GET,http://localhost:8080/favicon.ico,
+false,GET,http://www.google-analytics.com/analytics.js,Out of Context
+false,GET,https://www.jhipster.tech/problem/problem-with-message,Out of Context
+true,GET,http://localhost:8080/api/admin/users?page=0&size=20,
+false,GET,http://browsehappy.com/?locale=en%5C,Out of Context
+false,GET,https://bugreport.java.com/bugreport/,Out of Context
+false,GET,https://openjdk.java.net/,Out of Context
+false,GET,https://repo.maven.apache.org/maven2/org/apache/maven/wrapper/maven-wrapper/3.1.1/maven-wrapper-3.1.1.jar,Out of Context
+false,GET,http://localhost:8761/eureka/,Out of Context
+false,GET,http://localhost:8761/config,Out of Context
+false,GET,http://localhost:9411/,Out of Context
+false,GET,http://127.0.0.1:8080/,Out of Context
+false,GET,http://localhost:9091/,Out of Context
+true,GET,http://localhost:8080/api/users?page=0&size=20,

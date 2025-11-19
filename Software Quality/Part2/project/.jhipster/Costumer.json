@@ -1,0 +1,29 @@
+{
+  "applications": "*",
+  "changelogDate": "20230526101810",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "costumer",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Costumer",
+  "orderBy": "id ASC",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "person",
+      "ownerSide": true,
+      "relationshipName": "person",
+      "relationshipType": "one-to-one",
+      "relationshipValidateRules": "required"
+    }
+  ],
+  "service": "serviceImpl"
+}

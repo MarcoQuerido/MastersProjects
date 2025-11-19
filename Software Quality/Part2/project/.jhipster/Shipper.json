@@ -1,0 +1,28 @@
+{
+  "applications": "*",
+  "changelogDate": "20230526101808",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "shipper",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "unique"]
+    }
+  ],
+  "fluentMethods": true,
+  "identifier": "id",
+  "jpaMetamodelFiltering": false,
+  "name": "Shipper",
+  "orderBy": "id ASC",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

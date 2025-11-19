@@ -1,0 +1,23 @@
+barcode,description,name,price,stockCritical,stockCurrent
+ABC123,This is a great product,Awesome Product,19,10,100
+DEF456,Another fantastic product,Amazing Product,29,5,50
+GHI789,A wonderful item,Fantastic Item,9,20,200
+JKL012,A must-have product,Incredible Product,39,2,20
+MNO345,A useful tool,Handy Tool,14,15,150
+PQR678,A reliable device,Trusty Device,79,3,30
+STU901,A high-quality item,Premium Item,49,8,80
+VWX234,A trendy accessory,Fashionable Accessory,24,12,120
+YZa567,A stylish clothing item,Chic Clothing,39,5,50
+bCd890,A fun toy,Playful Toy,9,30,300
+efG123,A durable item,Sturdy Item,59,4,40
+hiJ456,A comfortable product,Cozy Product,34,10,100
+klM789,A tasty treat,Delicious Treat,7,50,500
+noP012,An educational item,Informative Item,19,15,150
+qRs345,A versatile gadget,Handy Gadget,49,5,50
+tUv678,A useful tool,Useful Tool,12,25,250
+wXy901,A convenient product,Handy Product,29,8,80
+zAB234,A fun toy,Playful Toy,14,20,200
+CDc567,A stylish accessory,Fashionable Accessory,19,10,100
+EFG890,A high-quality item,Premium Item,99,3,30
+HIj123,A reliable device,Trusty Device,129,2,20
+KLm456,An elegant clothing item,Sophisticated Clothing,79,5,50

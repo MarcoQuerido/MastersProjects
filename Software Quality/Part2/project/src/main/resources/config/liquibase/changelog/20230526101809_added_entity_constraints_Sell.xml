@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity Sell.
+    -->
+    <changeSet id="20230526101809-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="costumer_id"
+                                 baseTableName="sell"
+                                 constraintName="fk_sell__costumer_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="customer"/>
+
+        <addForeignKeyConstraint baseColumnNames="payment_type_id"
+                                 baseTableName="sell"
+                                 constraintName="fk_sell__payment_type_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="payment_type"/>
+
+        <addForeignKeyConstraint baseColumnNames="status_id"
+                                 baseTableName="sell"
+                                 constraintName="fk_sell__status_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="sell_status"/>
+
+        <addForeignKeyConstraint baseColumnNames="billing_type_id"
+                                 baseTableName="sell"
+                                 constraintName="fk_sell__billing_type_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="billing_type"/>
+
+        <addForeignKeyConstraint baseColumnNames="billing_company_id"
+                                 baseTableName="sell"
+                                 constraintName="fk_sell__billing_company_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="billing_company"/>
+
+        <addForeignKeyConstraint baseColumnNames="billing_address_id"
+                                 baseTableName="sell"
+                                 constraintName="fk_sell__billing_address_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="address"/>
+
+        <addForeignKeyConstraint baseColumnNames="shipper_id"
+                                 baseTableName="sell"
+                                 constraintName="fk_sell__shipper_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="shipper"/>
+
+        <addForeignKeyConstraint baseColumnNames="shipping_address_id"
+                                 baseTableName="sell"
+                                 constraintName="fk_sell__shipping_address_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="address"/>
+
+        <addForeignKeyConstraint baseColumnNames="salesperson_id"
+                                 baseTableName="sell"
+                                 constraintName="fk_sell__salesperson_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="salesperson"/>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,24 @@
+{
+  "trebolApp": {
+    "salesperson": {
+      "home": {
+        "title": "Salespeople",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Salesperson",
+        "createOrEditLabel": "Create or edit a Salesperson",
+        "notFound": "No Salespeople found"
+      },
+      "created": "A new Salesperson is created with identifier {{ param }}",
+      "updated": "A Salesperson is updated with identifier {{ param }}",
+      "deleted": "A Salesperson is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Salesperson {{ id }}?"
+      },
+      "detail": {
+        "title": "Salesperson"
+      },
+      "id": "Id",
+      "person": "Person"
+    }
+  }
+}

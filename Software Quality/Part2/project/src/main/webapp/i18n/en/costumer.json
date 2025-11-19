@@ -1,0 +1,24 @@
+{
+  "trebolApp": {
+    "costumer": {
+      "home": {
+        "title": "Costumers",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Costumer",
+        "createOrEditLabel": "Create or edit a Costumer",
+        "notFound": "No Costumers found"
+      },
+      "created": "A new Costumer is created with identifier {{ param }}",
+      "updated": "A Costumer is updated with identifier {{ param }}",
+      "deleted": "A Costumer is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Costumer {{ id }}?"
+      },
+      "detail": {
+        "title": "Costumer"
+      },
+      "id": "Id",
+      "person": "Person"
+    }
+  }
+}

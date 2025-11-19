@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <style type="text/css" MEDIA="all">@import url("hello2morrow.css");</style>
+        <script src="tablefilter/tablefilter.js"></script>
+        <title>Sonargraph Architect Report - Issue Details for Namespace Cycle Group</title>
+    </head>
+
+    <body>
+        <a name="top"></a>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td width="200" bgcolor="#333333"><img src="spacer.gif" alt="" width="200" height="65" border="0"></td>
+                <td width="23" bgcolor="E3E4E5"><img src="spacer.gif" width="23" height="1"></td>
+                <td width="100%" bgcolor="E3E4E5">
+                    <table border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td width="7" bgcolor="e3e4e5"><img src="spacer.gif" width="7" height="1"></td>
+                            <td><img src="hello2morrow.gif" alt="hello2morrow" width="227" height="23" border="0"></td>
+                            <td width="100%" align="right" bgcolor="e3e4e5"><img src="header.gif" alt="hello2morrow" width="543" height="65" border="0"></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" bgcolor="#000000"></td>
+            </tr>
+            <tr>
+<!-- start of navigation -->            
+                <td bgcolor="#A7A9AC" valign="top">
+                    <div class="leftNav">
+                    </div>
+                </td>
+<!-- end of navigation -->
+                <!-- start of spacer -->
+                <td width="23"><img src="spacer.gif" width="23" height="1"></td><!-- end of spacer -->
+                
+                <!-- real content -->
+                <td width="100%">
+                    <table width="100%" border="0">
+                        <tr>
+                            <td width="1%" height="80" valign="center">
+                                <image src="logo.gif" width="350"></image>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h1><a name="system"></a>Details of Unresolved Issues (Namespace Cycle Group) of System 'QESOFT_PROJECT_P2'</h1>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Path: </strong>C:\Users\joaoc\Documents\ISEP\Ano\QESOFT\Projeto\qesoft_20222023_101\Part2\project\QESOFT_PROJECT_P2.sonargraph<br/>
+                                <strong>System Description: </strong><br/>
+                                <strong>Sonargraph Version: </strong>12.6.0.792<br/>
+                                <strong>Report Creation: </strong>2023-05-29 12:00:16<br/>
+                                
+                                	<strong>Link to Main Report: </strong><a href="./QESOFT_PROJECT_P2_2023-05-29_12-00-16_501.html" target="QESOFT_PROJECT_P2_2023-05-29_12-00-16_501.html">QESOFT_PROJECT_P2_2023-05-29_12-00-16_501.html</a><br/>
+                                
+                                <strong>Current Virtual Model: </strong>Parser <br/>
+                                
+                                
+                                
+                                 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><h2><a name="openIssues"></a>Unresolved Issues (1) of Type "Namespace Cycle Group"</h2>
+								                            	
+                            </td>
+                        </tr>
+	                    <tr>
+                            <td>
+                            
+<!-- Unresolved Duplicates -->
+                            
+<!-- Unresolved Cycle Groups -->                           	
+                           	   <table class="techTable" width="100%" id="NamespaceCycleGroup">
+                                	<thead>
+	                                    <tr>
+	                                        <th>Name</th>
+	                                        
+	                                        <th>Scope</th>
+	                                        <th>Size</th>
+	                                        <th>Involved Elements</th>
+	                                    </tr>
+	                                 </thead>
+                                    <tr>
+<td>
+[Critical] Java Package cycle group 1.1
+</td>
+<td>
+Module: trebol
+</td>
+<td>
+12
+</td>
+<td>
+org.trebol <br/>
+org.trebol.config <br/>
+org.trebol.domain <br/>
+org.trebol.repository <br/>
+org.trebol.security <br/>
+org.trebol.security.jwt <br/>
+org.trebol.service <br/>
+org.trebol.service.dto <br/>
+org.trebol.service.mapper <br/>
+org.trebol.web.rest <br/>
+org.trebol.web.rest.errors <br/>
+org.trebol.web.rest.vm <br/>
+</td>
+</tr>
+
+                            	</table>               
+                                <script>
+                                	var rowCount = 1;
+                            		var rowCounts = [25, 50];
+                            		if (rowCount > 50)
+                            		{
+                            			rowCounts = [25, 50, rowCount];
+                            		}
+                            		
+                            		var enablePaging = rowCount > 25;
+                            		
+						    		var filtersConfig = {
+										base_path: 'tablefilter/',
+						        		extensions:[{
+							          		name: 'sort',
+							          		types: ['string', 'string', 'number', 'string']								          		
+						        		}],
+										alternate_rows: true,
+										rows_counter: true,
+						            	rows_counter_text: 'Cycle Groups: ',
+						            	btn_reset: true,
+						            	status_bar: true,
+						            	loader: true,
+										mark_active_columns: true,
+										highlight_keywords: true,
+										paging: enablePaging,
+								        results_per_page: ['Cycle Groups/Page: ', rowCounts],
+								       	
+								       	
+                                    		col_widths: ['12px', '15px', '5px', '30px'],	
+                                    	
+								       	
+						        		themes: [{ name: 'default' }]
+								    };
+									var tf = new TableFilter('NamespaceCycleGroup', filtersConfig);
+									tf.init();
+                                </script>
+                            </td>
+                           	
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+    <!-- end of real content -->
+            </tr>
+        </table>
+    </body>
+</html>

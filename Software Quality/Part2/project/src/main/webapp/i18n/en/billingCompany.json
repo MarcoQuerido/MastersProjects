@@ -1,0 +1,25 @@
+{
+  "trebolApp": {
+    "billingCompany": {
+      "home": {
+        "title": "Billing Companies",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Billing Company",
+        "createOrEditLabel": "Create or edit a Billing Company",
+        "notFound": "No Billing Companies found"
+      },
+      "created": "A new Billing Company is created with identifier {{ param }}",
+      "updated": "A Billing Company is updated with identifier {{ param }}",
+      "deleted": "A Billing Company is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Billing Company {{ id }}?"
+      },
+      "detail": {
+        "title": "Billing Company"
+      },
+      "id": "Id",
+      "idNumber": "Id Number",
+      "name": "Name"
+    }
+  }
+}

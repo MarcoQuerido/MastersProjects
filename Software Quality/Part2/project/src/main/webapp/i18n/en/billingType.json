@@ -1,0 +1,24 @@
+{
+  "trebolApp": {
+    "billingType": {
+      "home": {
+        "title": "Billing Types",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Billing Type",
+        "createOrEditLabel": "Create or edit a Billing Type",
+        "notFound": "No Billing Types found"
+      },
+      "created": "A new Billing Type is created with identifier {{ param }}",
+      "updated": "A Billing Type is updated with identifier {{ param }}",
+      "deleted": "A Billing Type is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Billing Type {{ id }}?"
+      },
+      "detail": {
+        "title": "Billing Type"
+      },
+      "id": "Id",
+      "name": "Name"
+    }
+  }
+}
