@@ -1,0 +1,57 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+' === ENTITIES ===
+class Order {
+  - orderId: String
+  - productId: String
+  - quantity: Int
+}
+
+class Product {
+  - productId: String
+  - name: String
+  - tasks: List<Task>
+}
+
+class Task {
+  - taskId: String
+  - time: Int
+  - humanResources: List<HumanResource>
+  - physicalResources: List<PhysicalResource>
+}
+
+class PhysicalResource {
+  - resourceId: String
+}
+
+class HumanResource {
+  - humanId: String
+  - name: String
+  - skills: Set<String>
+}
+
+class TaskSchedule {
+  - orderId: String
+  - productNumber: Int
+  - taskId: String
+  - startTime: Int
+  - endTime: Int
+  - allocatedPhysicalResources: List<String>
+  - allocatedHumanResources: List<String>
+}
+
+class ProductionSchedule {
+  - taskSchedules: List<TaskSchedule>
+}
+
+' === RELATIONSHIPS ===
+Order --> Product : 1..n
+Product --> Task : 1..n
+TaskSchedule --> Task : schedules
+TaskSchedule --> Order : 1..n
+ProductionSchedule --> TaskSchedule : 1..n
+Task --> PhysicalResource : 1..n
+Task --> HumanResource : 1..n
+
+@enduml

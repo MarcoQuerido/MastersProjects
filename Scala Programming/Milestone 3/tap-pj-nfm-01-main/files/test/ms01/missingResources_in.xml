@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Production xmlns="http://www.dei.isep.ipp.pt/tap-2025" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.dei.isep.ipp.pt/tap-2025 ../../production.xsd ">
+    <Products>
+        <Product id="PRD_1" name="PRD_1">
+            <Process tskref="TSK_5"/>
+        </Product>
+    </Products>
+    <Orders>
+        <Order id="ORD_1" prdref="PRD_1" quantity="5"/>
+    </Orders>
+</Production>

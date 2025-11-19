@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Schedule xmlns="http://www.dei.isep.ipp.pt/tap-2025" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.dei.isep.ipp.pt/tap-2025 ../../schedule.xsd ">
+    <TaskSchedule order="ORD_1" productNumber="1" task="TSK_1" start="0" end="5">
+        <PhysicalResources>
+            <Physical id="PRS_1"/>
+        </PhysicalResources>
+        <HumanResources>
+            <Human name="Pedro"/>
+        </HumanResources>
+    </TaskSchedule>
+    <TaskSchedule order="ORD_1" productNumber="2" task="TSK_1" start="5" end="10">
+        <PhysicalResources>
+            <Physical id="PRS_1"/>
+        </PhysicalResources>
+        <HumanResources>
+            <Human name="Maria"/>
+        </HumanResources>
+    </TaskSchedule>
+    <TaskSchedule order="ORD_1" productNumber="3" task="TSK_1" start="10" end="15">
+        <PhysicalResources>
+            <Physical id="PRS_1"/>
+        </PhysicalResources>
+        <HumanResources>
+            <Human name="Antonio"/>
+        </HumanResources>
+    </TaskSchedule>
+    <TaskSchedule order="ORD_1" productNumber="1" task="TSK_2" start="15" end="25">
+        <PhysicalResources>
+            <Physical id="PRS_2"/>
+        </PhysicalResources>
+        <HumanResources>
+            <Human name="Antonio"/>
+        </HumanResources>
+    </TaskSchedule>
+    <TaskSchedule order="ORD_1" productNumber="2" task="TSK_2" start="25" end="35">
+        <PhysicalResources>
+            <Physical id="PRS_2"/>
+        </PhysicalResources>
+        <HumanResources>
+            <Human name="Pedro"/>
+        </HumanResources>
+    </TaskSchedule>
+    <TaskSchedule order="ORD_1" productNumber="3" task="TSK_2" start="35" end="45">
+        <PhysicalResources>
+            <Physical id="PRS_2"/>
+        </PhysicalResources>
+        <HumanResources>
+            <Human name="Maria"/>
+        </HumanResources>
+    </TaskSchedule>
+    <TaskSchedule order="ORD_2" productNumber="1" task="TSK_1" start="15" end="20">
+        <PhysicalResources>
+            <Physical id="PRS_1"/>
+        </PhysicalResources>
+        <HumanResources>
+            <Human name="Pedro"/>
+        </HumanResources>
+    </TaskSchedule>
+    <TaskSchedule order="ORD_2" productNumber="1" task="TSK_3" start="45" end="65">
+        <PhysicalResources>
+            <Physical id="PRS_3"/>
+        </PhysicalResources>
+        <HumanResources>
+            <Human name="Antonio"/>
+        </HumanResources>
+    </TaskSchedule>
+    <TaskSchedule order="ORD_2" productNumber="1" task="TSK_4" start="65" end="105">
+        <PhysicalResources>
+            <Physical id="PRS_4"/>
+        </PhysicalResources>
+        <HumanResources>
+            <Human name="Maria"/>
+        </HumanResources>
+    </TaskSchedule>
+    <TaskSchedule order="ORD_2" productNumber="2" task="TSK_1" start="20" end="25">
+        <PhysicalResources>
+            <Physical id="PRS_1"/>
+        </PhysicalResources>
+        <HumanResources>
+            <Human name="Maria"/>
+        </HumanResources>
+    </TaskSchedule>
+    <TaskSchedule order="ORD_2" productNumber="2" task="TSK_3" start="65" end="85">
+        <PhysicalResources>
+            <Physical id="PRS_3"/>
+        </PhysicalResources>
+        <HumanResources>
+            <Human name="Antonio"/>
+        </HumanResources>
+    </TaskSchedule>
+    <TaskSchedule order="ORD_2" productNumber="2" task="TSK_4" start="105" end="145">
+        <PhysicalResources>
+            <Physical id="PRS_4"/>
+        </PhysicalResources>
+        <HumanResources>
+            <Human name="Maria"/>
+        </HumanResources>
+    </TaskSchedule>
+    <TaskSchedule order="ORD_3" productNumber="1" task="TSK_1" start="35" end="40">
+        <PhysicalResources>
+            <Physical id="PRS_1"/>
+        </PhysicalResources>
+        <HumanResources>
+            <Human name="Pedro"/>
+        </HumanResources>
+    </TaskSchedule>
+    <TaskSchedule order="ORD_3" productNumber="1" task="TSK_2" start="45" end="55">
+        <PhysicalResources>
+            <Physical id="PRS_2"/>
+        </PhysicalResources>
+        <HumanResources>
+            <Human name="Pedro"/>
+        </HumanResources>
+    </TaskSchedule>
+    <TaskSchedule order="ORD_3" productNumber="1" task="TSK_3"
+                  start="85" end="105">
+        <PhysicalResources>
+            <Physical id="PRS_3"/>
+        </PhysicalResources>
+        <HumanResources>
+            <Human name="Antonio"/>
+        </HumanResources>
+    </TaskSchedule>
+</Schedule>
