@@ -1,0 +1,20 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Test_Z_Garbage_Collector_ForkJoinPool" type="Application" factoryName="Application" folderName="ForkJoinPool">
+    <option name="MAIN_CLASS_NAME" value="ThreadPool_Based_Digital_Image_Processing.ForkJoinPool.FilterTest" />
+    <module name="Digital_Image_Processing" />
+    <option name="PROGRAM_PARAMETERS" value="java -XX:+UnlockExperimentalVMOptions -XX:+UseZGC Application.java" />
+    <extension name="net.ashald.envfile">
+      <option name="IS_ENABLED" value="false" />
+      <option name="IS_SUBST" value="false" />
+      <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+      <option name="IS_IGNORE_MISSING_FILES" value="false" />
+      <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+      <ENTRIES>
+        <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
+      </ENTRIES>
+    </extension>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

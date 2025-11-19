@@ -1,0 +1,1 @@
+Time taken for Brighter filter: 676 milliseconds

@@ -1,0 +1,217 @@
+| Image Size | 	Filter Type | Tests  | 	Time
+|  696x522px |   BRIGHTER   | Test 1 | 194 ms
+|  696x522px |   BRIGHTER   | Test 2 | 49 ms
+|  696x522px |   BRIGHTER   | Test 3 | 39 ms
+|  696x522px |   BRIGHTER   | Test 4 | 43 ms
+|  696x522px |   BRIGHTER   | Test 5 | 33 ms
+|  696x522px |   BRIGHTER   | Test 6 | 40 ms
+|  696x522px |   BRIGHTER   | Test 7 | 54 ms
+|  696x522px |   BRIGHTER   | Test 8 | 44 ms
+|  696x522px |   BRIGHTER   | Test 9 | 44 ms
+|  696x522px |   BRIGHTER   | Test 10 | 39 ms
+Average time taken for BRIGHTER filter over 10 tests: 57 milliseconds
+
+|  696x522px |   GRAYSCALE   | Test 1 | 39 ms
+|  696x522px |   GRAYSCALE   | Test 2 | 53 ms
+|  696x522px |   GRAYSCALE   | Test 3 | 32 ms
+|  696x522px |   GRAYSCALE   | Test 4 | 32 ms
+|  696x522px |   GRAYSCALE   | Test 5 | 31 ms
+|  696x522px |   GRAYSCALE   | Test 6 | 32 ms
+|  696x522px |   GRAYSCALE   | Test 7 | 41 ms
+|  696x522px |   GRAYSCALE   | Test 8 | 37 ms
+|  696x522px |   GRAYSCALE   | Test 9 | 36 ms
+|  696x522px |   GRAYSCALE   | Test 10 | 31 ms
+Average time taken for GRAYSCALE filter over 10 tests: 36 milliseconds
+
+|  696x522px |   SWIRL   | Test 1 | 54 ms
+|  696x522px |   SWIRL   | Test 2 | 60 ms
+|  696x522px |   SWIRL   | Test 3 | 55 ms
+|  696x522px |   SWIRL   | Test 4 | 52 ms
+|  696x522px |   SWIRL   | Test 5 | 53 ms
+|  696x522px |   SWIRL   | Test 6 | 52 ms
+|  696x522px |   SWIRL   | Test 7 | 56 ms
+|  696x522px |   SWIRL   | Test 8 | 53 ms
+|  696x522px |   SWIRL   | Test 9 | 81 ms
+|  696x522px |   SWIRL   | Test 10 | 66 ms
+Average time taken for SWIRL filter over 10 tests: 58 milliseconds
+
+|  696x522px |   GLASS   | Test 1 | 73 ms
+|  696x522px |   GLASS   | Test 2 | 70 ms
+|  696x522px |   GLASS   | Test 3 | 69 ms
+|  696x522px |   GLASS   | Test 4 | 69 ms
+|  696x522px |   GLASS   | Test 5 | 58 ms
+|  696x522px |   GLASS   | Test 6 | 60 ms
+|  696x522px |   GLASS   | Test 7 | 61 ms
+|  696x522px |   GLASS   | Test 8 | 64 ms
+|  696x522px |   GLASS   | Test 9 | 58 ms
+|  696x522px |   GLASS   | Test 10 | 60 ms
+Average time taken for GLASS filter over 10 tests: 64 milliseconds
+
+|  696x522px |   BLUR   | Test 1 | 638 ms
+|  696x522px |   BLUR   | Test 2 | 628 ms
+|  696x522px |   BLUR   | Test 3 | 623 ms
+|  696x522px |   BLUR   | Test 4 | 625 ms
+|  696x522px |   BLUR   | Test 5 | 625 ms
+|  696x522px |   BLUR   | Test 6 | 639 ms
+|  696x522px |   BLUR   | Test 7 | 626 ms
+|  696x522px |   BLUR   | Test 8 | 627 ms
+|  696x522px |   BLUR   | Test 9 | 626 ms
+|  696x522px |   BLUR   | Test 10 | 623 ms
+Average time taken for BLUR filter over 10 tests: 628 milliseconds
+
+|  696x522px |   CONDITIONAL_BLUR   | Test 1 | 60 ms
+|  696x522px |   CONDITIONAL_BLUR   | Test 2 | 53 ms
+|  696x522px |   CONDITIONAL_BLUR   | Test 3 | 53 ms
+|  696x522px |   CONDITIONAL_BLUR   | Test 4 | 53 ms
+|  696x522px |   CONDITIONAL_BLUR   | Test 5 | 63 ms
+|  696x522px |   CONDITIONAL_BLUR   | Test 6 | 52 ms
+|  696x522px |   CONDITIONAL_BLUR   | Test 7 | 53 ms
+|  696x522px |   CONDITIONAL_BLUR   | Test 8 | 54 ms
+|  696x522px |   CONDITIONAL_BLUR   | Test 9 | 55 ms
+|  696x522px |   CONDITIONAL_BLUR   | Test 10 | 53 ms
+Average time taken for CONDITIONAL_BLUR filter over 10 tests: 54 milliseconds
+
+|  1600x1067px |   BRIGHTER   | Test 1 | 213 ms
+|  1600x1067px |   BRIGHTER   | Test 2 | 172 ms
+|  1600x1067px |   BRIGHTER   | Test 3 | 201 ms
+|  1600x1067px |   BRIGHTER   | Test 4 | 175 ms
+|  1600x1067px |   BRIGHTER   | Test 5 | 179 ms
+|  1600x1067px |   BRIGHTER   | Test 6 | 194 ms
+|  1600x1067px |   BRIGHTER   | Test 7 | 173 ms
+|  1600x1067px |   BRIGHTER   | Test 8 | 191 ms
+|  1600x1067px |   BRIGHTER   | Test 9 | 191 ms
+|  1600x1067px |   BRIGHTER   | Test 10 | 171 ms
+Average time taken for BRIGHTER filter over 10 tests: 186 milliseconds
+
+|  1600x1067px |   GRAYSCALE   | Test 1 | 187 ms
+|  1600x1067px |   GRAYSCALE   | Test 2 | 195 ms
+|  1600x1067px |   GRAYSCALE   | Test 3 | 170 ms
+|  1600x1067px |   GRAYSCALE   | Test 4 | 175 ms
+|  1600x1067px |   GRAYSCALE   | Test 5 | 193 ms
+|  1600x1067px |   GRAYSCALE   | Test 6 | 200 ms
+|  1600x1067px |   GRAYSCALE   | Test 7 | 171 ms
+|  1600x1067px |   GRAYSCALE   | Test 8 | 175 ms
+|  1600x1067px |   GRAYSCALE   | Test 9 | 189 ms
+|  1600x1067px |   GRAYSCALE   | Test 10 | 201 ms
+Average time taken for GRAYSCALE filter over 10 tests: 185 milliseconds
+
+|  1600x1067px |   SWIRL   | Test 1 | 311 ms
+|  1600x1067px |   SWIRL   | Test 2 | 301 ms
+|  1600x1067px |   SWIRL   | Test 3 | 325 ms
+|  1600x1067px |   SWIRL   | Test 4 | 283 ms
+|  1600x1067px |   SWIRL   | Test 5 | 255 ms
+|  1600x1067px |   SWIRL   | Test 6 | 321 ms
+|  1600x1067px |   SWIRL   | Test 7 | 310 ms
+|  1600x1067px |   SWIRL   | Test 8 | 325 ms
+|  1600x1067px |   SWIRL   | Test 9 | 326 ms
+|  1600x1067px |   SWIRL   | Test 10 | 336 ms
+Average time taken for SWIRL filter over 10 tests: 309 milliseconds
+
+|  1600x1067px |   GLASS   | Test 1 | 375 ms
+|  1600x1067px |   GLASS   | Test 2 | 309 ms
+|  1600x1067px |   GLASS   | Test 3 | 294 ms
+|  1600x1067px |   GLASS   | Test 4 | 295 ms
+|  1600x1067px |   GLASS   | Test 5 | 296 ms
+|  1600x1067px |   GLASS   | Test 6 | 311 ms
+|  1600x1067px |   GLASS   | Test 7 | 297 ms
+|  1600x1067px |   GLASS   | Test 8 | 297 ms
+|  1600x1067px |   GLASS   | Test 9 | 295 ms
+|  1600x1067px |   GLASS   | Test 10 | 293 ms
+Average time taken for GLASS filter over 10 tests: 306 milliseconds
+
+|  1600x1067px |   BLUR   | Test 1 | 3018 ms
+|  1600x1067px |   BLUR   | Test 2 | 2988 ms
+|  1600x1067px |   BLUR   | Test 3 | 3007 ms
+|  1600x1067px |   BLUR   | Test 4 | 3054 ms
+|  1600x1067px |   BLUR   | Test 5 | 2999 ms
+|  1600x1067px |   BLUR   | Test 6 | 2997 ms
+|  1600x1067px |   BLUR   | Test 7 | 2981 ms
+|  1600x1067px |   BLUR   | Test 8 | 3057 ms
+|  1600x1067px |   BLUR   | Test 9 | 2998 ms
+|  1600x1067px |   BLUR   | Test 10 | 3007 ms
+Average time taken for BLUR filter over 10 tests: 3010 milliseconds
+
+|  1600x1067px |   CONDITIONAL_BLUR   | Test 1 | 648 ms
+|  1600x1067px |   CONDITIONAL_BLUR   | Test 2 | 651 ms
+|  1600x1067px |   CONDITIONAL_BLUR   | Test 3 | 668 ms
+|  1600x1067px |   CONDITIONAL_BLUR   | Test 4 | 651 ms
+|  1600x1067px |   CONDITIONAL_BLUR   | Test 5 | 651 ms
+|  1600x1067px |   CONDITIONAL_BLUR   | Test 6 | 670 ms
+|  1600x1067px |   CONDITIONAL_BLUR   | Test 7 | 650 ms
+|  1600x1067px |   CONDITIONAL_BLUR   | Test 8 | 701 ms
+|  1600x1067px |   CONDITIONAL_BLUR   | Test 9 | 648 ms
+|  1600x1067px |   CONDITIONAL_BLUR   | Test 10 | 649 ms
+Average time taken for CONDITIONAL_BLUR filter over 10 tests: 658 milliseconds
+
+|  2776x1504px |   BRIGHTER   | Test 1 | 418 ms
+|  2776x1504px |   BRIGHTER   | Test 2 | 355 ms
+|  2776x1504px |   BRIGHTER   | Test 3 | 380 ms
+|  2776x1504px |   BRIGHTER   | Test 4 | 418 ms
+|  2776x1504px |   BRIGHTER   | Test 5 | 431 ms
+|  2776x1504px |   BRIGHTER   | Test 6 | 460 ms
+|  2776x1504px |   BRIGHTER   | Test 7 | 454 ms
+|  2776x1504px |   BRIGHTER   | Test 8 | 473 ms
+|  2776x1504px |   BRIGHTER   | Test 9 | 426 ms
+|  2776x1504px |   BRIGHTER   | Test 10 | 409 ms
+Average time taken for BRIGHTER filter over 10 tests: 422 milliseconds
+
+|  2776x1504px |   GRAYSCALE   | Test 1 | 538 ms
+|  2776x1504px |   GRAYSCALE   | Test 2 | 409 ms
+|  2776x1504px |   GRAYSCALE   | Test 3 | 399 ms
+|  2776x1504px |   GRAYSCALE   | Test 4 | 342 ms
+|  2776x1504px |   GRAYSCALE   | Test 5 | 479 ms
+|  2776x1504px |   GRAYSCALE   | Test 6 | 352 ms
+|  2776x1504px |   GRAYSCALE   | Test 7 | 358 ms
+|  2776x1504px |   GRAYSCALE   | Test 8 | 336 ms
+|  2776x1504px |   GRAYSCALE   | Test 9 | 411 ms
+|  2776x1504px |   GRAYSCALE   | Test 10 | 340 ms
+Average time taken for GRAYSCALE filter over 10 tests: 396 milliseconds
+
+|  2776x1504px |   SWIRL   | Test 1 | 530 ms
+|  2776x1504px |   SWIRL   | Test 2 | 534 ms
+|  2776x1504px |   SWIRL   | Test 3 | 533 ms
+|  2776x1504px |   SWIRL   | Test 4 | 564 ms
+|  2776x1504px |   SWIRL   | Test 5 | 527 ms
+|  2776x1504px |   SWIRL   | Test 6 | 535 ms
+|  2776x1504px |   SWIRL   | Test 7 | 569 ms
+|  2776x1504px |   SWIRL   | Test 8 | 535 ms
+|  2776x1504px |   SWIRL   | Test 9 | 533 ms
+|  2776x1504px |   SWIRL   | Test 10 | 611 ms
+Average time taken for SWIRL filter over 10 tests: 547 milliseconds
+
+|  2776x1504px |   GLASS   | Test 1 | 709 ms
+|  2776x1504px |   GLASS   | Test 2 | 647 ms
+|  2776x1504px |   GLASS   | Test 3 | 660 ms
+|  2776x1504px |   GLASS   | Test 4 | 637 ms
+|  2776x1504px |   GLASS   | Test 5 | 663 ms
+|  2776x1504px |   GLASS   | Test 6 | 640 ms
+|  2776x1504px |   GLASS   | Test 7 | 669 ms
+|  2776x1504px |   GLASS   | Test 8 | 645 ms
+|  2776x1504px |   GLASS   | Test 9 | 639 ms
+|  2776x1504px |   GLASS   | Test 10 | 650 ms
+Average time taken for GLASS filter over 10 tests: 655 milliseconds
+
+|  2776x1504px |   BLUR   | Test 1 | 7308 ms
+|  2776x1504px |   BLUR   | Test 2 | 7452 ms
+|  2776x1504px |   BLUR   | Test 3 | 7301 ms
+|  2776x1504px |   BLUR   | Test 4 | 7503 ms
+|  2776x1504px |   BLUR   | Test 5 | 7288 ms
+|  2776x1504px |   BLUR   | Test 6 | 7517 ms
+|  2776x1504px |   BLUR   | Test 7 | 7274 ms
+|  2776x1504px |   BLUR   | Test 8 | 7352 ms
+|  2776x1504px |   BLUR   | Test 9 | 7284 ms
+|  2776x1504px |   BLUR   | Test 10 | 7395 ms
+Average time taken for BLUR filter over 10 tests: 7367 milliseconds
+
+|  2776x1504px |   CONDITIONAL_BLUR   | Test 1 | 1367 ms
+|  2776x1504px |   CONDITIONAL_BLUR   | Test 2 | 1363 ms
+|  2776x1504px |   CONDITIONAL_BLUR   | Test 3 | 1537 ms
+|  2776x1504px |   CONDITIONAL_BLUR   | Test 4 | 1488 ms
+|  2776x1504px |   CONDITIONAL_BLUR   | Test 5 | 1458 ms
+|  2776x1504px |   CONDITIONAL_BLUR   | Test 6 | 1481 ms
+|  2776x1504px |   CONDITIONAL_BLUR   | Test 7 | 1445 ms
+|  2776x1504px |   CONDITIONAL_BLUR   | Test 8 | 1442 ms
+|  2776x1504px |   CONDITIONAL_BLUR   | Test 9 | 1360 ms
+|  2776x1504px |   CONDITIONAL_BLUR   | Test 10 | 1380 ms
+Average time taken for CONDITIONAL_BLUR filter over 10 tests: 1432 milliseconds
+

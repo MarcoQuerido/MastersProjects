@@ -1,0 +1,218 @@
+| Image Size | 	Filter Type | 	Number of Threads | 
+Tests | 	Time
+|  696x522px |   BRIGHTER   |          5         | Test 1 | 256 ms
+|  696x522px |   BRIGHTER   |          5         | Test 2 | 100 ms
+|  696x522px |   BRIGHTER   |          5         | Test 3 | 96 ms
+|  696x522px |   BRIGHTER   |          5         | Test 4 | 66 ms
+|  696x522px |   BRIGHTER   |          5         | Test 5 | 38 ms
+|  696x522px |   BRIGHTER   |          5         | Test 6 | 50 ms
+|  696x522px |   BRIGHTER   |          5         | Test 7 | 91 ms
+|  696x522px |   BRIGHTER   |          5         | Test 8 | 62 ms
+|  696x522px |   BRIGHTER   |          5         | Test 9 | 33 ms
+|  696x522px |   BRIGHTER   |          5         | Test 10 | 43 ms
+Average time for BRIGHTER filter with 5 threads: 83 milliseconds
+
+|  696x522px |   GRAYSCALE   |          5         | Test 1 | 62 ms
+|  696x522px |   GRAYSCALE   |          5         | Test 2 | 39 ms
+|  696x522px |   GRAYSCALE   |          5         | Test 3 | 39 ms
+|  696x522px |   GRAYSCALE   |          5         | Test 4 | 40 ms
+|  696x522px |   GRAYSCALE   |          5         | Test 5 | 83 ms
+|  696x522px |   GRAYSCALE   |          5         | Test 6 | 88 ms
+|  696x522px |   GRAYSCALE   |          5         | Test 7 | 79 ms
+|  696x522px |   GRAYSCALE   |          5         | Test 8 | 77 ms
+|  696x522px |   GRAYSCALE   |          5         | Test 9 | 74 ms
+|  696x522px |   GRAYSCALE   |          5         | Test 10 | 85 ms
+Average time for GRAYSCALE filter with 5 threads: 66 milliseconds
+
+|  696x522px |   SWIRL   |          5         | Test 1 | 121 ms
+|  696x522px |   SWIRL   |          5         | Test 2 | 106 ms
+|  696x522px |   SWIRL   |          5         | Test 3 | 110 ms
+|  696x522px |   SWIRL   |          5         | Test 4 | 82 ms
+|  696x522px |   SWIRL   |          5         | Test 5 | 52 ms
+|  696x522px |   SWIRL   |          5         | Test 6 | 68 ms
+|  696x522px |   SWIRL   |          5         | Test 7 | 53 ms
+|  696x522px |   SWIRL   |          5         | Test 8 | 51 ms
+|  696x522px |   SWIRL   |          5         | Test 9 | 50 ms
+|  696x522px |   SWIRL   |          5         | Test 10 | 50 ms
+Average time for SWIRL filter with 5 threads: 74 milliseconds
+
+|  696x522px |   GLASS   |          5         | Test 1 | 87 ms
+|  696x522px |   GLASS   |          5         | Test 2 | 62 ms
+|  696x522px |   GLASS   |          5         | Test 3 | 65 ms
+|  696x522px |   GLASS   |          5         | Test 4 | 65 ms
+|  696x522px |   GLASS   |          5         | Test 5 | 63 ms
+|  696x522px |   GLASS   |          5         | Test 6 | 67 ms
+|  696x522px |   GLASS   |          5         | Test 7 | 70 ms
+|  696x522px |   GLASS   |          5         | Test 8 | 64 ms
+|  696x522px |   GLASS   |          5         | Test 9 | 66 ms
+|  696x522px |   GLASS   |          5         | Test 10 | 68 ms
+Average time for GLASS filter with 5 threads: 67 milliseconds
+
+|  696x522px |   BLUR   |          5         | Test 1 | 230 ms
+|  696x522px |   BLUR   |          5         | Test 2 | 239 ms
+|  696x522px |   BLUR   |          5         | Test 3 | 198 ms
+|  696x522px |   BLUR   |          5         | Test 4 | 266 ms
+|  696x522px |   BLUR   |          5         | Test 5 | 201 ms
+|  696x522px |   BLUR   |          5         | Test 6 | 202 ms
+|  696x522px |   BLUR   |          5         | Test 7 | 200 ms
+|  696x522px |   BLUR   |          5         | Test 8 | 203 ms
+|  696x522px |   BLUR   |          5         | Test 9 | 202 ms
+|  696x522px |   BLUR   |          5         | Test 10 | 251 ms
+Average time for BLUR filter with 5 threads: 219 milliseconds
+
+|  696x522px |   CONDITIONAL_BLUR   |          5         | Test 1 | 74 ms
+|  696x522px |   CONDITIONAL_BLUR   |          5         | Test 2 | 53 ms
+|  696x522px |   CONDITIONAL_BLUR   |          5         | Test 3 | 54 ms
+|  696x522px |   CONDITIONAL_BLUR   |          5         | Test 4 | 55 ms
+|  696x522px |   CONDITIONAL_BLUR   |          5         | Test 5 | 51 ms
+|  696x522px |   CONDITIONAL_BLUR   |          5         | Test 6 | 57 ms
+|  696x522px |   CONDITIONAL_BLUR   |          5         | Test 7 | 49 ms
+|  696x522px |   CONDITIONAL_BLUR   |          5         | Test 8 | 50 ms
+|  696x522px |   CONDITIONAL_BLUR   |          5         | Test 9 | 51 ms
+|  696x522px |   CONDITIONAL_BLUR   |          5         | Test 10 | 48 ms
+Average time for CONDITIONAL_BLUR filter with 5 threads: 54 milliseconds
+
+|  1600x1067px |   BRIGHTER   |          5         | Test 1 | 163 ms
+|  1600x1067px |   BRIGHTER   |          5         | Test 2 | 144 ms
+|  1600x1067px |   BRIGHTER   |          5         | Test 3 | 148 ms
+|  1600x1067px |   BRIGHTER   |          5         | Test 4 | 101 ms
+|  1600x1067px |   BRIGHTER   |          5         | Test 5 | 94 ms
+|  1600x1067px |   BRIGHTER   |          5         | Test 6 | 91 ms
+|  1600x1067px |   BRIGHTER   |          5         | Test 7 | 85 ms
+|  1600x1067px |   BRIGHTER   |          5         | Test 8 | 100 ms
+|  1600x1067px |   BRIGHTER   |          5         | Test 9 | 87 ms
+|  1600x1067px |   BRIGHTER   |          5         | Test 10 | 87 ms
+Average time for BRIGHTER filter with 5 threads: 110 milliseconds
+
+|  1600x1067px |   GRAYSCALE   |          5         | Test 1 | 87 ms
+|  1600x1067px |   GRAYSCALE   |          5         | Test 2 | 102 ms
+|  1600x1067px |   GRAYSCALE   |          5         | Test 3 | 84 ms
+|  1600x1067px |   GRAYSCALE   |          5         | Test 4 | 85 ms
+|  1600x1067px |   GRAYSCALE   |          5         | Test 5 | 81 ms
+|  1600x1067px |   GRAYSCALE   |          5         | Test 6 | 95 ms
+|  1600x1067px |   GRAYSCALE   |          5         | Test 7 | 84 ms
+|  1600x1067px |   GRAYSCALE   |          5         | Test 8 | 85 ms
+|  1600x1067px |   GRAYSCALE   |          5         | Test 9 | 81 ms
+|  1600x1067px |   GRAYSCALE   |          5         | Test 10 | 81 ms
+Average time for GRAYSCALE filter with 5 threads: 86 milliseconds
+
+|  1600x1067px |   SWIRL   |          5         | Test 1 | 128 ms
+|  1600x1067px |   SWIRL   |          5         | Test 2 | 115 ms
+|  1600x1067px |   SWIRL   |          5         | Test 3 | 102 ms
+|  1600x1067px |   SWIRL   |          5         | Test 4 | 109 ms
+|  1600x1067px |   SWIRL   |          5         | Test 5 | 148 ms
+|  1600x1067px |   SWIRL   |          5         | Test 6 | 126 ms
+|  1600x1067px |   SWIRL   |          5         | Test 7 | 126 ms
+|  1600x1067px |   SWIRL   |          5         | Test 8 | 108 ms
+|  1600x1067px |   SWIRL   |          5         | Test 9 | 103 ms
+|  1600x1067px |   SWIRL   |          5         | Test 10 | 118 ms
+Average time for SWIRL filter with 5 threads: 118 milliseconds
+
+|  1600x1067px |   GLASS   |          5         | Test 1 | 168 ms
+|  1600x1067px |   GLASS   |          5         | Test 2 | 166 ms
+|  1600x1067px |   GLASS   |          5         | Test 3 | 167 ms
+|  1600x1067px |   GLASS   |          5         | Test 4 | 165 ms
+|  1600x1067px |   GLASS   |          5         | Test 5 | 171 ms
+|  1600x1067px |   GLASS   |          5         | Test 6 | 170 ms
+|  1600x1067px |   GLASS   |          5         | Test 7 | 165 ms
+|  1600x1067px |   GLASS   |          5         | Test 8 | 165 ms
+|  1600x1067px |   GLASS   |          5         | Test 9 | 161 ms
+|  1600x1067px |   GLASS   |          5         | Test 10 | 166 ms
+Average time for GLASS filter with 5 threads: 166 milliseconds
+
+|  1600x1067px |   BLUR   |          5         | Test 1 | 509 ms
+|  1600x1067px |   BLUR   |          5         | Test 2 | 573 ms
+|  1600x1067px |   BLUR   |          5         | Test 3 | 553 ms
+|  1600x1067px |   BLUR   |          5         | Test 4 | 509 ms
+|  1600x1067px |   BLUR   |          5         | Test 5 | 512 ms
+|  1600x1067px |   BLUR   |          5         | Test 6 | 512 ms
+|  1600x1067px |   BLUR   |          5         | Test 7 | 504 ms
+|  1600x1067px |   BLUR   |          5         | Test 8 | 521 ms
+|  1600x1067px |   BLUR   |          5         | Test 9 | 516 ms
+|  1600x1067px |   BLUR   |          5         | Test 10 | 526 ms
+Average time for BLUR filter with 5 threads: 523 milliseconds
+
+|  1600x1067px |   CONDITIONAL_BLUR   |          5         | Test 1 | 179 ms
+|  1600x1067px |   CONDITIONAL_BLUR   |          5         | Test 2 | 186 ms
+|  1600x1067px |   CONDITIONAL_BLUR   |          5         | Test 3 | 213 ms
+|  1600x1067px |   CONDITIONAL_BLUR   |          5         | Test 4 | 189 ms
+|  1600x1067px |   CONDITIONAL_BLUR   |          5         | Test 5 | 182 ms
+|  1600x1067px |   CONDITIONAL_BLUR   |          5         | Test 6 | 220 ms
+|  1600x1067px |   CONDITIONAL_BLUR   |          5         | Test 7 | 182 ms
+|  1600x1067px |   CONDITIONAL_BLUR   |          5         | Test 8 | 190 ms
+|  1600x1067px |   CONDITIONAL_BLUR   |          5         | Test 9 | 185 ms
+|  1600x1067px |   CONDITIONAL_BLUR   |          5         | Test 10 | 181 ms
+Average time for CONDITIONAL_BLUR filter with 5 threads: 190 milliseconds
+
+|  2776x1504px |   BRIGHTER   |          5         | Test 1 | 211 ms
+|  2776x1504px |   BRIGHTER   |          5         | Test 2 | 245 ms
+|  2776x1504px |   BRIGHTER   |          5         | Test 3 | 260 ms
+|  2776x1504px |   BRIGHTER   |          5         | Test 4 | 283 ms
+|  2776x1504px |   BRIGHTER   |          5         | Test 5 | 264 ms
+|  2776x1504px |   BRIGHTER   |          5         | Test 6 | 209 ms
+|  2776x1504px |   BRIGHTER   |          5         | Test 7 | 215 ms
+|  2776x1504px |   BRIGHTER   |          5         | Test 8 | 291 ms
+|  2776x1504px |   BRIGHTER   |          5         | Test 9 | 202 ms
+|  2776x1504px |   BRIGHTER   |          5         | Test 10 | 210 ms
+Average time for BRIGHTER filter with 5 threads: 239 milliseconds
+
+|  2776x1504px |   GRAYSCALE   |          5         | Test 1 | 238 ms
+|  2776x1504px |   GRAYSCALE   |          5         | Test 2 | 203 ms
+|  2776x1504px |   GRAYSCALE   |          5         | Test 3 | 246 ms
+|  2776x1504px |   GRAYSCALE   |          5         | Test 4 | 200 ms
+|  2776x1504px |   GRAYSCALE   |          5         | Test 5 | 267 ms
+|  2776x1504px |   GRAYSCALE   |          5         | Test 6 | 202 ms
+|  2776x1504px |   GRAYSCALE   |          5         | Test 7 | 235 ms
+|  2776x1504px |   GRAYSCALE   |          5         | Test 8 | 198 ms
+|  2776x1504px |   GRAYSCALE   |          5         | Test 9 | 246 ms
+|  2776x1504px |   GRAYSCALE   |          5         | Test 10 | 210 ms
+Average time for GRAYSCALE filter with 5 threads: 224 milliseconds
+
+|  2776x1504px |   SWIRL   |          5         | Test 1 | 317 ms
+|  2776x1504px |   SWIRL   |          5         | Test 2 | 257 ms
+|  2776x1504px |   SWIRL   |          5         | Test 3 | 297 ms
+|  2776x1504px |   SWIRL   |          5         | Test 4 | 278 ms
+|  2776x1504px |   SWIRL   |          5         | Test 5 | 326 ms
+|  2776x1504px |   SWIRL   |          5         | Test 6 | 359 ms
+|  2776x1504px |   SWIRL   |          5         | Test 7 | 309 ms
+|  2776x1504px |   SWIRL   |          5         | Test 8 | 296 ms
+|  2776x1504px |   SWIRL   |          5         | Test 9 | 247 ms
+|  2776x1504px |   SWIRL   |          5         | Test 10 | 311 ms
+Average time for SWIRL filter with 5 threads: 299 milliseconds
+
+|  2776x1504px |   GLASS   |          5         | Test 1 | 383 ms
+|  2776x1504px |   GLASS   |          5         | Test 2 | 390 ms
+|  2776x1504px |   GLASS   |          5         | Test 3 | 413 ms
+|  2776x1504px |   GLASS   |          5         | Test 4 | 383 ms
+|  2776x1504px |   GLASS   |          5         | Test 5 | 432 ms
+|  2776x1504px |   GLASS   |          5         | Test 6 | 385 ms
+|  2776x1504px |   GLASS   |          5         | Test 7 | 401 ms
+|  2776x1504px |   GLASS   |          5         | Test 8 | 399 ms
+|  2776x1504px |   GLASS   |          5         | Test 9 | 387 ms
+|  2776x1504px |   GLASS   |          5         | Test 10 | 374 ms
+Average time for GLASS filter with 5 threads: 394 milliseconds
+
+|  2776x1504px |   BLUR   |          5         | Test 1 | 1420 ms
+|  2776x1504px |   BLUR   |          5         | Test 2 | 1355 ms
+|  2776x1504px |   BLUR   |          5         | Test 3 | 1316 ms
+|  2776x1504px |   BLUR   |          5         | Test 4 | 1403 ms
+|  2776x1504px |   BLUR   |          5         | Test 5 | 1357 ms
+|  2776x1504px |   BLUR   |          5         | Test 6 | 1521 ms
+|  2776x1504px |   BLUR   |          5         | Test 7 | 1364 ms
+|  2776x1504px |   BLUR   |          5         | Test 8 | 1486 ms
+|  2776x1504px |   BLUR   |          5         | Test 9 | 1360 ms
+|  2776x1504px |   BLUR   |          5         | Test 10 | 1430 ms
+Average time for BLUR filter with 5 threads: 1401 milliseconds
+
+|  2776x1504px |   CONDITIONAL_BLUR   |          5         | Test 1 | 544 ms
+|  2776x1504px |   CONDITIONAL_BLUR   |          5         | Test 2 | 568 ms
+|  2776x1504px |   CONDITIONAL_BLUR   |          5         | Test 3 | 575 ms
+|  2776x1504px |   CONDITIONAL_BLUR   |          5         | Test 4 | 572 ms
+|  2776x1504px |   CONDITIONAL_BLUR   |          5         | Test 5 | 556 ms
+|  2776x1504px |   CONDITIONAL_BLUR   |          5         | Test 6 | 592 ms
+|  2776x1504px |   CONDITIONAL_BLUR   |          5         | Test 7 | 569 ms
+|  2776x1504px |   CONDITIONAL_BLUR   |          5         | Test 8 | 571 ms
+|  2776x1504px |   CONDITIONAL_BLUR   |          5         | Test 9 | 578 ms
+|  2776x1504px |   CONDITIONAL_BLUR   |          5         | Test 10 | 548 ms
+Average time for CONDITIONAL_BLUR filter with 5 threads: 567 milliseconds
+
