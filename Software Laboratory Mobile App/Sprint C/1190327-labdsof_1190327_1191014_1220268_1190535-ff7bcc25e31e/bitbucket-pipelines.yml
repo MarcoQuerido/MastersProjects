@@ -1,0 +1,32 @@
+image: node:14
+
+pipelines:
+  default:
+    - step:
+        name: Install dependencies
+        caches:
+          - node
+        script:
+          - cd cleancity
+          - npm install --include=dev
+    - step:
+        name: Build and Push Docker Image
+        services:
+          - docker
+        script:
+          - cd cleancity
+          - docker build -t $DOCKER_USERNAME/cleancity:latest .
+          - echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
+          - docker push $DOCKER_USERNAME/cleancity:latest
+    - step:
+        name: Deploy to Azure
+        image: mcr.microsoft.com/azure-cli
+        script:
+          - az login --service-principal -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET --tenant $AZURE_TENANT_ID
+          - az webapp config container set --name $AZURE_APP_NAME --resource-group $AZURE_RESOURCE_GROUP --docker-custom-image-name $DOCKER_USERNAME/cleancity:latest
+          - az webapp restart --name $AZURE_APP_NAME --resource-group $AZURE_RESOURCE_GROUP
+
+definitions:
+  services:
+    docker:
+      memory: 1024
